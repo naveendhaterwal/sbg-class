@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Indian Telecom Five Forces</title>
+<title>Jio: Scale to Defensibility</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%B6%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,500&family=Public+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
@@ -373,28 +373,6 @@
   .implication .eyebrow{ margin-bottom:0.4rem; }
   .implication p{ color:var(--ink); font-size:0.95rem; max-width:60ch; }
 
-  details.rationale{
-    margin-top:1.4rem;
-    border:1px solid var(--line);
-    border-radius:var(--radius-m);
-    background:var(--surface);
-  }
-  details.rationale summary{
-    list-style:none;
-    cursor:pointer;
-    padding:0.9rem 1.15rem;
-    display:flex; align-items:center; justify-content:space-between;
-    font-weight:600; font-size:0.92rem;
-    color:var(--ink);
-  }
-  details.rationale summary::-webkit-details-marker{ display:none; }
-  details.rationale summary .plus{
-    font-family:var(--mono); font-size:1.1rem; color:var(--accent); transition:transform .25s ease;
-  }
-  details.rationale[open] summary .plus{ transform:rotate(45deg); }
-  .rationale-body{ padding:0 1.15rem 1.15rem; display:flex; flex-direction:column; gap:0.9rem; border-top:1px solid var(--line); padding-top:0.9rem; }
-  .rationale-body h4{ font-family:var(--mono); font-size:0.68rem; text-transform:uppercase; letter-spacing:0.09em; color:var(--accent); font-weight:600; margin-bottom:0.3rem; }
-  .rationale-body p{ font-size:0.9rem; color:var(--ink-soft); line-height:1.55; }
 
   /* -- force visuals -- */
   .visual-card{
@@ -481,37 +459,6 @@
   .sub-arrow-label{ display:flex; flex-direction:column; align-items:center; font-family:var(--mono); font-size:0.65rem; color:var(--ink-faint); flex:0 0 auto; }
   .sub-arrow-label .arr{ font-size:1.1rem; color:var(--accent); }
 
-  /* ============ RATINGS SCALE ============ */
-  .scale-track{
-    display:grid; grid-template-columns:repeat(4,1fr);
-    border:1px solid var(--line-strong); border-radius:var(--radius-m); overflow:hidden;
-  }
-  .scale-seg{
-    text-align:center; padding:1.2rem 0.6rem;
-    font-family:var(--mono); font-weight:700; font-size:0.82rem; letter-spacing:0.04em;
-    border-right:1px solid var(--line-strong);
-    transition:transform .2s ease, filter .2s ease;
-  }
-  .scale-seg:last-child{ border-right:none; }
-  .scale-seg:hover{ filter:brightness(1.05); }
-  .scale-seg.is-active{ transform:scale(1.03); box-shadow:inset 0 0 0 2px var(--ink); }
-  .scale-seg[data-level="low"]{ background:var(--heat-1); color:#5B5433; }
-  .scale-seg[data-level="moderate"]{ background:var(--heat-2); color:#3E2506; }
-  .scale-seg[data-level="high"]{ background:var(--heat-3); color:#FFF7F1; }
-  .scale-seg[data-level="veryhigh"]{ background:var(--heat-4); color:#FFF5F6; }
-  @media (max-width:640px){ .scale-track{ grid-template-columns:1fr 1fr; } .scale-seg{ border-bottom:1px solid var(--line-strong); } }
-
-  .scale-detail{
-    margin-top:1.4rem; background:var(--surface); border:1px solid var(--line);
-    border-radius:var(--radius-m); padding:clamp(1.3rem,3vw,2rem);
-    display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem;
-  }
-  @media (max-width:760px){ .scale-detail{ grid-template-columns:1fr; } }
-  .scale-detail .sd-col h4{ font-family:var(--mono); font-size:0.68rem; text-transform:uppercase; letter-spacing:0.09em; color:var(--accent); margin-bottom:0.5rem; font-weight:600; }
-  .scale-detail .sd-col p{ font-size:0.92rem; color:var(--ink-soft); line-height:1.6; }
-  .scale-applies{ font-family:var(--mono); font-size:0.72rem; color:var(--ink-faint); margin-top:1rem; grid-column:1/-1; border-top:1px solid var(--line); padding-top:0.9rem; }
-  .scale-applies b{ color:var(--ink); }
-
   /* ============ HEATMAP ============ */
   .heatmap-wrap{ overflow-x:auto; border:1px solid var(--line-strong); border-radius:var(--radius-m); }
   table.heatmap{ width:100%; border-collapse:collapse; min-width:560px; background:var(--surface); }
@@ -544,17 +491,6 @@
   }
   .story-close{ margin-top:2.2rem; font-size:1.05rem; color:var(--ink-soft); max-width:62ch; text-align:center; line-height:1.7; }
   .story-close b{ color:var(--ink); }
-
-  /* ============ CONCLUSION ============ */
-  .conclusion-card{
-    background:var(--navy); color:var(--paper);
-    border-radius:var(--radius-m); padding:clamp(2.2rem,5vw,3.6rem);
-  }
-  .conclusion-card .verdict-label{ font-family:var(--mono); font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; color:#98A4C6; }
-  .conclusion-card h2{ color:var(--paper); font-size:clamp(1.7rem,4vw,2.5rem); margin-top:0.6rem; }
-  .conclusion-card h2 span{ color:#E8B7C0; }
-  .conclusion-body{ margin-top:1.8rem; display:grid; gap:1.1rem; max-width:820px; }
-  .conclusion-body p{ color:#D9DDE8; font-size:1rem; line-height:1.75; }
 
   /* ============ STUDENT CARD ============ */
   .final-card{
@@ -711,20 +647,209 @@
   .ref-list li::before{ content:"§"; position:absolute; left:0; color:var(--accent); font-weight:700; }
   .ref-list b{ color:var(--ink); }
 
-  .insight-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1.1rem; }
-  @media (max-width:900px){ .insight-grid{ grid-template-columns:1fr; } }
-  .insight-callout{ background:var(--surface); border:1px solid var(--line); border-top:3px solid var(--accent); border-radius:var(--radius-m); padding:1.6rem 1.5rem; box-shadow:var(--shadow-sm); }
-  .insight-callout .ic-num{ font-family:var(--mono); font-size:0.7rem; color:var(--accent); font-weight:700; letter-spacing:0.06em; }
-  .insight-callout p{ font-family:var(--serif); font-style:italic; font-size:1.08rem; color:var(--ink); line-height:1.5; margin-top:0.7rem; }
-
   .op-scope-note{ font-size:0.85rem; color:var(--ink-faint); margin-top:1.4rem; font-style:italic; max-width:76ch; }
 
-  .story-list{ margin-top:1.6rem; display:flex; flex-direction:column; gap:0.6rem; max-width:640px; margin-left:auto; margin-right:auto; }
-  .story-list li{ font-size:0.98rem; color:var(--ink-soft); padding-left:1.2rem; position:relative; line-height:1.5; }
-  .story-list li::before{ content:"→"; position:absolute; left:0; color:var(--accent); font-weight:700; }
-  .conclusion-body ul.story-list{ max-width:none; margin-left:0; }
-  .conclusion-body ul.story-list li{ color:#D9DDE8; }
-  .conclusion-body ul.story-list li::before{ color:#E8B7C0; }
+  /* ============ ASSIGNMENT 3 — SHARED ADDITIONS ============ */
+  .heat-strength{ background:#E4EEE2; color:#2C5233; }
+  .heat-weakness{ background:#F5E6E8; color:#7A1526; }
+  .heat-opportunity{ background:#E0E8F5; color:#1F3A6B; }
+  .heat-threat{ background:var(--heat-4); color:#FFF5F6; }
+
+  /* ---- hero stat strip ---- */
+  .stat-strip{ margin-top:clamp(2.2rem,5vw,3.2rem); display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line-strong); border:1px solid var(--line-strong); border-radius:var(--radius-m); overflow:hidden; }
+  @media (max-width:760px){ .stat-strip{ grid-template-columns:repeat(2,1fr); } }
+  .stat-item{ background:var(--surface); padding:1.2rem 1.1rem; display:flex; flex-direction:column; gap:0.3rem; }
+  .stat-item .stat-num{ font-family:var(--serif); font-weight:700; font-size:clamp(1.5rem,3vw,2rem); color:var(--navy); line-height:1; }
+  .stat-item .stat-num .cu{ display:inline; }
+  .stat-item .stat-label{ font-size:0.82rem; color:var(--ink-soft); line-height:1.35; }
+  .stat-item .stat-date{ font-family:var(--mono); font-size:0.66rem; color:var(--ink-faint); letter-spacing:0.03em; }
+  .hero-thesis{ margin-top:1.6rem; font-family:var(--serif); font-weight:600; font-size:clamp(1.15rem,2.3vw,1.5rem); color:var(--ink); line-height:1.4; max-width:52ch; }
+  .hero-thesis b{ color:var(--accent-dark); }
+
+  /* ---- strategic question ---- */
+  .question-mark{ text-align:center; font-family:var(--serif); font-weight:600; font-size:clamp(1.5rem,3.6vw,2.3rem); max-width:760px; margin:0 auto clamp(2.4rem,5vw,3.4rem); line-height:1.3; }
+  .qflow{ display:flex; align-items:stretch; gap:0.8rem; max-width:960px; margin:0 auto; }
+  @media (max-width:800px){ .qflow{ flex-direction:column; } }
+  .qflow-step{ flex:1; background:var(--surface); border:1px solid var(--line); border-top:3px solid var(--navy); border-radius:var(--radius-m); padding:1.3rem 1.1rem; text-align:center; box-shadow:var(--shadow-sm); }
+  .qflow-step:nth-child(5){ border-top-color:var(--accent); }
+  .qflow-step .qf-tag{ font-family:var(--mono); font-weight:700; font-size:0.72rem; letter-spacing:0.08em; color:var(--navy); }
+  .qflow-step:nth-child(5) .qf-tag{ color:var(--accent); }
+  .qflow-step .qf-sub{ margin-top:0.5rem; font-size:0.85rem; color:var(--ink-soft); }
+  .qflow-arrow{ align-self:center; color:var(--ink-faint); font-size:1.2rem; flex:0 0 auto; }
+  @media (max-width:800px){ .qflow-arrow{ transform:rotate(90deg); } }
+
+  /* ---- charts ---- */
+  .chart-block{ background:var(--surface); border:1px solid var(--line); border-radius:var(--radius-m); padding:clamp(1.4rem,3vw,2.2rem); }
+  .chart-headline{ font-family:var(--serif); font-weight:700; font-size:1.15rem; color:var(--ink); margin-bottom:1.4rem; }
+  .chart-bar-row{ display:grid; grid-template-columns:76px 1fr 88px; align-items:center; gap:0.8rem; margin-bottom:0.8rem; }
+  .chart-bar-row .cb-name{ font-family:var(--mono); font-weight:700; font-size:0.78rem; color:var(--ink); }
+  .chart-bar-track{ background:var(--paper-alt); border-radius:3px; height:22px; overflow:hidden; }
+  .chart-bar-fill{ height:100%; width:0; border-radius:3px; background:var(--navy); transition:width 1.1s cubic-bezier(.2,.7,.2,1); }
+  .chart-block.in-view .chart-bar-fill{ width:var(--pct); }
+  .chart-bar-row{ --pct:0%; }
+  .chart-bar-row.op-airtel .chart-bar-fill{ background:var(--accent); }
+  .chart-bar-row.op-vi .chart-bar-fill{ background:var(--heat-2); }
+  .chart-bar-row.op-bsnl .chart-bar-fill{ background:var(--navy-soft); }
+  .chart-bar-row.op-mtnl .chart-bar-fill{ background:var(--line-strong); }
+  .chart-bar-row .cb-val{ font-family:var(--mono); font-size:0.82rem; font-weight:600; color:var(--ink-soft); text-align:right; }
+  .chart-insight{ margin-top:1.1rem; font-size:0.92rem; color:var(--ink-soft); font-style:italic; border-top:1px solid var(--line); padding-top:1rem; }
+  .chart-grid-2{ display:grid; grid-template-columns:1fr 1fr; gap:1.4rem; }
+  @media (max-width:860px){ .chart-grid-2{ grid-template-columns:1fr; } }
+
+  /* ---- transition sections ---- */
+  .transition-block{ background:var(--navy); color:var(--paper); padding:clamp(3rem,6vw,4.6rem) 0; }
+  .transition-block .section-head{ max-width:820px; }
+  .transition-block .eyebrow{ color:#E8B7C0; }
+  .transition-block .eyebrow::before{ background:#E8B7C0; }
+  .transition-block h2{ color:var(--paper); }
+  .tmap-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; }
+  @media (max-width:900px){ .tmap-grid{ grid-template-columns:1fr 1fr; } }
+  @media (max-width:560px){ .tmap-grid{ grid-template-columns:1fr; } }
+  .tmap-card{ background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.14); border-radius:var(--radius-m); padding:1.2rem 1.1rem; display:flex; flex-direction:column; gap:0.7rem; }
+  .tmap-card .tmap-label{ font-family:var(--mono); font-size:0.64rem; letter-spacing:0.08em; text-transform:uppercase; color:#8E9AC0; font-weight:600; }
+  .tmap-card .tmap-porter{ font-family:var(--serif); font-weight:700; font-size:1.02rem; color:var(--paper); }
+  .tmap-card .tmap-arrow{ text-align:center; color:#8E9AC0; font-size:1.1rem; }
+  .tmap-card .tmap-swot{ font-size:0.9rem; color:#D9DDE8; }
+  .tmap-card .tmap-swot b{ color:#F3D9DD; }
+
+  /* ---- resource-test flow (SWOT to VRIO) ---- */
+  .rtest-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1.2rem; }
+  @media (max-width:900px){ .rtest-grid{ grid-template-columns:1fr; } }
+  .rtest-card{ background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.14); border-radius:var(--radius-m); padding:1.3rem 1.2rem; display:flex; flex-direction:column; gap:0.55rem; }
+  .rtest-card .rt-start{ font-family:var(--mono); font-weight:700; font-size:0.82rem; letter-spacing:0.03em; color:var(--paper); background:rgba(255,255,255,0.1); border-radius:2px; padding:0.5rem 0.7rem; text-align:center; }
+  .rtest-q{ display:flex; justify-content:space-between; align-items:baseline; font-size:0.85rem; border-top:1px dashed rgba(255,255,255,0.16); padding-top:0.5rem; }
+  .rtest-q .rq-q{ color:#B7C2DE; }
+  .rtest-q .rq-a{ font-family:var(--mono); font-weight:700; color:#F3D9DD; }
+  .rtest-card .rt-end{ margin-top:0.3rem; font-family:var(--mono); font-weight:700; font-size:0.8rem; letter-spacing:0.04em; color:var(--paper); background:var(--accent); border-radius:2px; padding:0.6rem 0.7rem; text-align:center; }
+
+  /* ---- SWOT ---- */
+  .swot-grid{ display:grid; grid-template-columns:1fr 1fr; gap:1.1rem; }
+  @media (max-width:820px){ .swot-grid{ grid-template-columns:1fr; } }
+  .swot-quad{ background:var(--surface); border:1px solid var(--line); border-radius:var(--radius-m); padding:clamp(1.3rem,2.6vw,1.8rem); border-top:4px solid var(--line-strong); }
+  .swot-quad.strength{ border-top-color:#3E7A4C; }
+  .swot-quad.weakness{ border-top-color:var(--accent); }
+  .swot-quad.opportunity{ border-top-color:#2C4E8A; }
+  .swot-quad.threat{ border-top-color:#8A1F1F; }
+  .swot-quad h3{ font-size:1.05rem; display:flex; align-items:center; gap:0.5rem; }
+  .swot-quad .swq-tag{ font-family:var(--mono); font-size:0.62rem; letter-spacing:0.08em; padding:0.2rem 0.5rem; border-radius:2px; font-weight:700; }
+  .swot-quad.strength .swq-tag{ background:#E4EEE2; color:#2C5233; }
+  .swot-quad.weakness .swq-tag{ background:var(--accent-tint); color:var(--accent-dark); }
+  .swot-quad.opportunity .swq-tag{ background:#E0E8F5; color:#1F3A6B; }
+  .swot-quad.threat .swq-tag{ background:#F5DEDE; color:#7A1F1F; }
+  .swot-item{ margin-top:1.1rem; padding-top:1rem; border-top:1px solid var(--line); }
+  .swot-item:first-of-type{ margin-top:1.2rem; }
+  .swot-item .si-head{ display:flex; align-items:baseline; gap:0.6rem; flex-wrap:wrap; }
+  .swot-item .si-num{ font-family:var(--mono); font-size:0.72rem; color:var(--ink-faint); font-weight:700; }
+  .swot-item .si-title{ font-weight:700; font-size:0.95rem; color:var(--ink); }
+  .swot-item .si-stats{ display:flex; gap:0.6rem; flex-wrap:wrap; margin:0.4rem 0; }
+  .swot-item .si-stat{ font-family:var(--mono); font-weight:700; font-size:0.95rem; color:var(--navy); }
+  .swot-item p{ font-size:0.88rem; color:var(--ink-soft); line-height:1.55; }
+  .swot-item .si-but{ margin-top:0.4rem; font-size:0.86rem; color:var(--ink); background:var(--paper-alt); border-left:3px solid var(--line-strong); padding:0.5rem 0.7rem; }
+  .swot-item .si-but b{ font-family:var(--mono); font-size:0.68rem; letter-spacing:0.06em; color:var(--accent); }
+  details.swot-more{ margin-top:1.1rem; }
+  details.swot-more summary{ list-style:none; cursor:pointer; font-family:var(--mono); font-size:0.72rem; font-weight:700; letter-spacing:0.05em; color:var(--navy-soft); text-transform:uppercase; }
+  details.swot-more summary::-webkit-details-marker{ display:none; }
+  details.swot-more summary::after{ content:" →"; }
+  details.swot-more[open] summary::after{ content:" ↑"; }
+
+  .matrix-grid{ display:grid; grid-template-columns:1fr 1fr; gap:1.1rem; margin-top:1rem; }
+  @media (max-width:760px){ .matrix-grid{ grid-template-columns:1fr; } }
+  .matrix-card{ background:var(--surface); border:1px solid var(--line); border-radius:var(--radius-m); padding:1.4rem 1.5rem; }
+  .matrix-card .mx-tag{ font-family:var(--mono); font-weight:700; font-size:0.9rem; color:var(--accent); }
+  .matrix-card h4{ font-size:0.92rem; margin-top:0.3rem; color:var(--ink); font-family:var(--sans); font-weight:700; letter-spacing:0.01em; }
+  .matrix-card p{ margin-top:0.6rem; font-size:0.9rem; color:var(--ink-soft); line-height:1.55; }
+
+  /* ---- VRIO ---- */
+  .vrio-wrap{ display:grid; grid-template-columns:1.3fr 1fr; gap:clamp(1.6rem,3vw,2.6rem); align-items:start; }
+  @media (max-width:900px){ .vrio-wrap{ grid-template-columns:1fr; } }
+  .vrio-table-wrap{ overflow-x:auto; border:1px solid var(--line-strong); border-radius:var(--radius-m); }
+  table.vrio-table{ width:100%; border-collapse:collapse; min-width:520px; background:var(--surface); }
+  table.vrio-table th{ text-align:left; font-family:var(--mono); font-size:0.66rem; text-transform:uppercase; letter-spacing:0.07em; color:var(--ink-faint); padding:0.8rem 0.9rem; border-bottom:1px solid var(--line-strong); font-weight:600; }
+  table.vrio-table th.vc{ text-align:center; }
+  table.vrio-table td{ padding:0.85rem 0.9rem; border-bottom:1px solid var(--line); font-size:0.86rem; vertical-align:middle; }
+  table.vrio-table td.vc{ text-align:center; font-weight:700; }
+  table.vrio-table td.vc.yes{ color:#2C6B3B; }
+  table.vrio-table td.vc.rel{ color:#8A6A1F; }
+  table.vrio-table td.vc.no{ color:var(--accent); }
+  table.vrio-table tbody tr{ cursor:pointer; transition:background .2s ease; }
+  table.vrio-table tbody tr:hover{ background:var(--paper-alt); }
+  table.vrio-table tbody tr.is-active{ background:var(--accent-tint); }
+  table.vrio-table tbody tr:last-child td{ border-bottom:none; }
+  table.vrio-table .vrio-name{ font-weight:600; font-family:var(--serif); }
+  .vrio-result-tag{ font-family:var(--mono); font-size:0.68rem; font-weight:700; letter-spacing:0.03em; padding:0.3rem 0.55rem; border-radius:2px; display:inline-block; white-space:nowrap; }
+  .vrio-result-tag.parity{ background:var(--heat-1); color:#5B5433; }
+  .vrio-result-tag.temporary{ background:var(--heat-2); color:#3E2506; }
+  .vrio-result-tag.strong{ background:#DCEAE0; color:#1F5232; }
+  .vrio-result-tag.sustained{ background:var(--navy); color:var(--paper); }
+  .vrio-drawer{ background:var(--navy); color:var(--paper); border-radius:var(--radius-m); padding:clamp(1.5rem,3vw,2rem); position:sticky; top:calc(var(--nav-h) + 20px); }
+  .vrio-drawer h4{ color:var(--paper); font-size:1.2rem; }
+  .vrio-drawer .vd-result{ margin-top:0.6rem; }
+  .vd-row{ margin-top:1.1rem; padding-top:1rem; border-top:1px solid rgba(255,255,255,0.14); }
+  .vd-row:first-of-type{ margin-top:1.3rem; }
+  .vd-row .vd-q{ font-family:var(--mono); font-size:0.68rem; text-transform:uppercase; letter-spacing:0.08em; color:#8E9AC0; font-weight:600; display:flex; justify-content:space-between; }
+  .vd-row .vd-a{ font-family:var(--mono); font-weight:700; color:#F3D9DD; }
+  .vd-row p{ margin-top:0.4rem; color:#D9DDE8; font-size:0.88rem; line-height:1.55; }
+  .vrio-drawer .vd-source{ margin-top:1.2rem; padding-top:1rem; border-top:1px solid rgba(255,255,255,0.14); font-family:var(--mono); font-size:0.7rem; color:#8E9AC0; }
+  .vrio-note{ margin-top:1.4rem; font-size:0.88rem; color:var(--ink-soft); background:var(--paper-alt); border-left:3px solid var(--navy); padding:0.9rem 1.1rem; max-width:80ch; }
+
+  /* ---- moat diagram ---- */
+  .moat-wrap{ display:flex; justify-content:center; margin:1rem 0 1.4rem; }
+  .moat-svg{ width:100%; max-width:620px; height:auto; overflow:visible; }
+  .moat-line{ stroke:var(--line-strong); stroke-width:1.5; transition:stroke .4s ease; }
+  .moat-line.is-lit{ stroke:var(--accent); }
+  .moat-node-bg{ fill:var(--surface); stroke:var(--navy); stroke-width:1.5; }
+  .moat-node-text{ font-family:var(--sans); font-weight:700; font-size:10.5px; fill:var(--ink); text-anchor:middle; }
+  .moat-center-circle{ fill:var(--accent); }
+  .moat-center-text{ fill:#fff; font-family:var(--mono); font-weight:700; font-size:11.5px; text-anchor:middle; }
+  .moat-lede{ text-align:center; font-family:var(--serif); font-weight:600; font-style:italic; font-size:1.1rem; color:var(--ink-soft); max-width:56ch; margin:0 auto; }
+  .moat-lede b{ color:var(--ink); font-style:normal; }
+
+  /* ---- evidence clusters ---- */
+  .cluster-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1.1rem; }
+  @media (max-width:900px){ .cluster-grid{ grid-template-columns:1fr; } }
+  .cluster-card{ background:var(--surface); border:1px solid var(--line); border-radius:var(--radius-m); padding:1.5rem 1.4rem; }
+  .cluster-card .cl-tag{ font-family:var(--mono); font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--accent); font-weight:700; }
+  .cluster-card .cl-metric{ margin-top:0.9rem; padding-top:0.9rem; border-top:1px solid var(--line); }
+  .cluster-card .cl-metric:first-of-type{ border-top:none; padding-top:0; margin-top:0.8rem; }
+  .cluster-card .cl-num{ font-family:var(--serif); font-weight:700; font-size:1.4rem; color:var(--navy); }
+  .cluster-card .cl-label{ font-size:0.82rem; color:var(--ink-soft); margin-top:0.15rem; }
+
+  /* ---- recommendations ---- */
+  .reco-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
+  @media (max-width:900px){ .reco-grid{ grid-template-columns:1fr 1fr; } }
+  @media (max-width:560px){ .reco-grid{ grid-template-columns:1fr; } }
+  .reco-card{ background:var(--surface); border:1px solid var(--line); border-radius:var(--radius-m); padding:1.4rem 1.3rem; display:flex; flex-direction:column; gap:0.6rem; box-shadow:var(--shadow-sm); transition:transform .2s ease, box-shadow .2s ease; }
+  .reco-card:hover{ transform:translateY(-3px); box-shadow:var(--shadow-md); }
+  .reco-card .rc-num{ font-family:var(--serif); font-weight:700; font-size:1.6rem; color:var(--line-strong); }
+  .reco-card h3{ font-size:1rem; }
+  .reco-card p{ font-size:0.88rem; color:var(--ink-soft); line-height:1.55; }
+
+  /* ---- final answer ---- */
+  .final-answer-card{ background:var(--navy); color:var(--paper); border-radius:var(--radius-m); padding:clamp(2.4rem,6vw,4rem); }
+  .final-answer-card .fa-thesis{ font-family:var(--serif); font-weight:700; font-size:clamp(1.8rem,4.2vw,2.7rem); line-height:1.25; }
+  .final-answer-card .fa-thesis b{ color:#E8B7C0; }
+  .logic-chain{ margin-top:2.4rem; display:flex; flex-direction:column; align-items:center; gap:0; }
+  .logic-step{ width:100%; max-width:640px; text-align:center; padding:1.1rem 1.4rem; }
+  .logic-step .lc-tag{ font-family:var(--mono); font-size:0.7rem; letter-spacing:0.09em; text-transform:uppercase; color:#8E9AC0; font-weight:700; }
+  .logic-step .lc-body{ margin-top:0.4rem; font-size:0.98rem; color:#E4E8F2; line-height:1.6; }
+  .logic-arrow{ font-size:1.3rem; color:#8E9AC0; }
+  .final-answer-card .fa-close{ margin-top:2.2rem; text-align:center; font-family:var(--serif); font-style:italic; font-size:1.1rem; color:#D9DDE8; max-width:64ch; margin-left:auto; margin-right:auto; line-height:1.7; }
+
+  /* ---- source badges ---- */
+  .source-badges{ display:flex; flex-wrap:wrap; gap:0.7rem; margin-bottom:1.6rem; }
+  details.source-badge{ border:1px solid var(--line-strong); border-radius:2px; background:var(--surface); }
+  details.source-badge summary{ list-style:none; cursor:pointer; font-family:var(--mono); font-weight:700; font-size:0.72rem; letter-spacing:0.05em; padding:0.5rem 0.85rem; color:var(--navy); }
+  details.source-badge summary::-webkit-details-marker{ display:none; }
+  details.source-badge[open]{ background:var(--paper-alt); }
+  .sb-body{ padding:0 0.9rem 0.9rem; font-size:0.82rem; color:var(--ink-soft); max-width:46ch; line-height:1.5; }
+
+  /* ---- read more (generic) ---- */
+  details.read-more{ margin-top:1.2rem; }
+  details.read-more summary{ list-style:none; cursor:pointer; font-family:var(--mono); font-size:0.72rem; font-weight:700; letter-spacing:0.05em; color:var(--navy-soft); text-transform:uppercase; }
+  details.read-more summary::-webkit-details-marker{ display:none; }
+  details.read-more summary::after{ content:" →"; }
+  details.read-more[open] summary::after{ content:" ↑"; }
+  details.read-more .rm-body{ margin-top:0.9rem; padding:1rem 1.1rem; background:var(--paper-alt); border-radius:var(--radius-s); font-size:0.88rem; color:var(--ink-soft); line-height:1.6; }
 </style>
 </head>
 <body>
@@ -733,17 +858,15 @@
 
 <nav class="site-nav" id="siteNav" aria-label="Primary">
   <div class="container nav-inner">
-    <span class="nav-mark">FIVE&nbsp;FORCES <b>·</b> INDIAN TELECOM</span>
+    <span class="nav-mark">JIO <b>·</b> STRATEGY CASE</span>
     <div class="nav-links" id="navLinks">
-      <a href="#snapshot">Snapshot</a>
-      <a href="#forces">Forces</a>
-      <a href="#analysis">Analysis</a>
-      <a href="#ratings">Ratings</a>
-      <a href="#insights">Insights</a>
-      <a href="#heatmap">Heatmap</a>
-      <a href="#story">Strategy</a>
-      <a href="#conclusion">Conclusion</a>
-      <a href="#evidence">Evidence</a>
+      <a href="#hero">Overview</a>
+      <a href="#porter">Porter</a>
+      <a href="#swot">SWOT</a>
+      <a href="#vrio">VRIO</a>
+      <a href="#moat">Moat</a>
+      <a href="#recommendations">Recommendations</a>
+      <a href="#sources">Sources</a>
     </div>
     <button class="btn-present" id="presentToggle" aria-haspopup="dialog">Presentation Mode</button>
   </div>
@@ -755,15 +878,15 @@
 <section class="hero" id="hero">
   <div class="container hero-grid">
     <div class="hero-titles">
-      <span class="eyebrow">Strategic Industry Analysis</span>
-      <h1>Porter's<br>Five Forces</h1>
-      <p class="subtitle">Indian Mobile Telecommunications Industry</p>
-      <p class="statement">How competitive pressure shapes profitability in India's mobile telecom industry.</p>
+      <span class="eyebrow">Business Strategy — Assignment 3</span>
+      <h1>Reliance Jio: From Industry Disruption to Defensible Advantage</h1>
+      <p class="subtitle">Porter → SWOT → VRIO analysis of India's mobile telecommunications industry and Jio's competitive position.</p>
       <div class="student-block">
         <span class="name">Naveen Kumar</span>
         <span class="meta">EN&nbsp;2401020041</span>
         <span class="meta">Section&nbsp;A</span>
       </div>
+      <p class="hero-thesis">Jio has already built <b>scale</b>. The next battle is <b>defensibility</b>.</p>
       <span class="scroll-cue">Scroll to explore <span class="arrow">↓</span></span>
     </div>
     <div class="wheel-wrap">
@@ -814,13 +937,66 @@
       </svg>
     </div>
   </div>
+  <div class="container">
+    <div class="stat-strip reveal reveal-stagger" id="heroStats">
+      <div class="stat-item" style="--i:0"><span class="stat-num" data-count="39.29" data-suffix="%">0%</span><span class="stat-label">Jio mobile market share</span><span class="stat-date">July 2026 · TRAI</span></div>
+      <div class="stat-item" style="--i:1"><span class="stat-num" data-count="506.03" data-suffix="M">0M</span><span class="stat-label">Jio wireless subscribers</span><span class="stat-date">July 2026 · TRAI</span></div>
+      <div class="stat-item" style="--i:2"><span class="stat-num" data-count="76255" data-prefix="₹" data-suffix=" Cr">₹0 Cr</span><span class="stat-label">Jio Platforms EBITDA</span><span class="stat-date">FY26 · Reliance</span></div>
+      <div class="stat-item" style="--i:3"><span class="stat-num" data-count="268" data-suffix="M+">0M+</span><span class="stat-label">5G users on Jio's network</span><span class="stat-date">March 2026 · Jio</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 — STRATEGIC QUESTION ============ -->
+<section class="section-pad alt-bg" id="question">
+  <div class="container">
+    <div class="section-head reveal" style="margin-left:auto;margin-right:auto;text-align:center;align-items:center;">
+      <span class="eyebrow">02 — The Strategic Question</span>
+    </div>
+    <p class="question-mark reveal">Does Jio's scale actually create a lasting competitive advantage?</p>
+    <div class="qflow reveal reveal-stagger">
+      <div class="qflow-step" style="--i:0"><span class="qf-tag">PORTER</span><p class="qf-sub">Industry pressure</p></div>
+      <span class="qflow-arrow">→</span>
+      <div class="qflow-step" style="--i:1"><span class="qf-tag">SWOT</span><p class="qf-sub">Jio's position</p></div>
+      <span class="qflow-arrow">→</span>
+      <div class="qflow-step" style="--i:2"><span class="qf-tag">VRIO</span><p class="qf-sub">Defensible resources</p></div>
+      <span class="qflow-arrow">→</span>
+      <div class="qflow-step" style="--i:3"><span class="qf-tag">STRATEGY</span><p class="qf-sub">What Jio should do</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 03 — PORTER'S FIVE FORCES (intro) ============ -->
+<section class="section-pad" id="porter">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">03 — Porter's Five Forces</span>
+      <h2>First, understand the battlefield.</h2>
+      <p class="lede">Porter explains the external competitive pressure surrounding Jio. The analysis shows an industry protected from easy entry, but pressured by rivalry and customer switching.</p>
+    </div>
+    <div class="card-grid-4 reveal reveal-stagger" style="margin-bottom:2.6rem;">
+      <div class="insight-card" style="--i:0"><span class="num">MAR 2026</span><h3>39.21%</h3><p>Jio — mobile subscriber market share.</p></div>
+      <div class="insight-card" style="--i:1"><span class="num">MAR 2026</span><h3>37.74%</h3><p>Airtel — close enough to keep rivalry intense.</p></div>
+      <div class="insight-card" style="--i:2"><span class="num">FEB 2026</span><h3>14.47M</h3><p>MNP requests — evidence of active switching.</p></div>
+      <div class="insight-card" style="--i:3"><span class="num">2024</span><h3>13–27%</h3><p>Jio tariff increase that reset industry pricing.</p></div>
+    </div>
+    <div class="chart-block reveal">
+      <p class="chart-headline">Two operators dominate the battlefield.</p>
+      <div class="chart-bar-row op-jio" style="--pct:39.21%"><span class="cb-name">JIO</span><div class="chart-bar-track"><div class="chart-bar-fill"></div></div><span class="cb-val">39.21%</span></div>
+      <div class="chart-bar-row op-airtel" style="--pct:37.74%"><span class="cb-name">AIRTEL</span><div class="chart-bar-track"><div class="chart-bar-fill"></div></div><span class="cb-val">37.74%</span></div>
+      <div class="chart-bar-row op-vi" style="--pct:15.68%"><span class="cb-name">VI</span><div class="chart-bar-track"><div class="chart-bar-fill"></div></div><span class="cb-val">15.68%</span></div>
+      <div class="chart-bar-row op-bsnl" style="--pct:7.34%"><span class="cb-name">BSNL</span><div class="chart-bar-track"><div class="chart-bar-fill"></div></div><span class="cb-val">7.34%</span></div>
+      <div class="chart-bar-row op-mtnl" style="--pct:2%"><span class="cb-name">MTNL</span><div class="chart-bar-track"><div class="chart-bar-fill"></div></div><span class="cb-val">0.02%</span></div>
+      <p class="chart-insight">Jio leads, but Airtel is close enough to keep rivalry intense — a near-duopoly at the top, with Vi and BSNL holding meaningful but secondary positions. Source: TRAI, March 2026.</p>
+    </div>
+  </div>
 </section>
 
 <!-- ============ SNAPSHOT ============ -->
 <section class="section-pad alt-bg" id="snapshot">
   <div class="container">
     <div class="section-head reveal">
-      <span class="eyebrow">01 — Industry Snapshot</span>
+      <span class="eyebrow">Porter · Industry Snapshot</span>
       <h2>A concentrated, capital-heavy market</h2>
     </div>
     <p class="snapshot-lede reveal">India's mobile telecom market is often shorthanded as a "three-player" story, but that undersells its actual structure. Reliance Jio and Bharti Airtel operate as scaled, private-sector leaders competing head-on for network and 5G leadership. Vodafone Idea (Vi) remains an important private-sector operator, working through balance-sheet pressure while still holding a meaningful subscriber base. Bharat Sanchar Nigam Limited (BSNL) persists as a significant public-sector alternative, operating with a different strategic mandate and cost structure than the private players. Together they compete in a capital-intensive industry where spectrum, infrastructure and technology investment — not brand alone — set the terms of survival.</p>
@@ -838,7 +1014,7 @@
 <section class="section-pad" id="forces">
   <div class="container">
     <div class="section-head reveal">
-      <span class="eyebrow">02 — The Five Forces</span>
+      <span class="eyebrow">Porter · The Five Forces</span>
       <h2>Select a force to examine it</h2>
       <p class="lede">Each force below carries a rating grounded in how the Indian telecom market actually operates. Click any card to see why.</p>
     </div>
@@ -851,7 +1027,7 @@
 <section class="section-pad alt-bg" id="analysis">
   <div class="container">
     <div class="section-head reveal">
-      <span class="eyebrow">03 — Detailed Analysis</span>
+      <span class="eyebrow">Porter · Force by Force</span>
       <h2>Force by force</h2>
     </div>
 
@@ -868,30 +1044,35 @@
           <div class="evidence-badge"><span class="eb-tag">Real Market Example</span><span class="eb-text">Jio entry + tariff competition + 5G race</span></div>
           <p>Rivalry is high because a small group of scaled operators — Reliance Jio, Bharti Airtel, Vodafone Idea and BSNL — compete for the same customers while carrying enormous sunk investments in spectrum and network infrastructure. Mobile connectivity itself is difficult to differentiate, so competition plays out on tariffs, network quality, 5G coverage and bundled digital services instead. Jio's 2016 entry demonstrates how a single strategic move can force an industry-wide response, and that pattern has repeated ever since.</p>
 
-          <div class="cs-tabs" id="riv-tabs" role="tablist" aria-label="Competitive rivalry case studies">
-            <button class="cs-tab is-active" data-case="0">Jio's 2016 Entry</button>
-            <button class="cs-tab" data-case="1">2024 Tariff Increases</button>
-            <button class="cs-tab" data-case="2">5G Competition</button>
-          </div>
-          <div class="case-study" id="riv-case"></div>
-
           <div class="implication">
             <span class="eyebrow">Strategic takeaway</span>
             <p>Scale, network investment, pricing discipline, customer retention and ecosystem bundling are critical.</p>
           </div>
 
-          <div class="ceo-box">
-            <h4>What would a telecom CEO do?</h4>
-            <ul>
-              <li>Avoid unsustainable price wars.</li>
-              <li>Invest selectively in network quality.</li>
-              <li>Increase customer lifetime value.</li>
-            </ul>
-          </div>
+          <details class="read-more">
+            <summary>Case studies, CEO view &amp; professor's question</summary>
+            <div class="rm-body">
+              <div class="cs-tabs" id="riv-tabs" role="tablist" aria-label="Competitive rivalry case studies">
+                <button class="cs-tab is-active" data-case="0">Jio's 2016 Entry</button>
+                <button class="cs-tab" data-case="1">2024 Tariff Increases</button>
+                <button class="cs-tab" data-case="2">5G Competition</button>
+              </div>
+              <div class="case-study" id="riv-case"></div>
 
-          <details class="professor-q">
-            <summary><span class="pq-mark">Q —</span><span class="pq-q">Isn't intense competition normal in any market? Why call this "very high"?</span></summary>
-            <div class="pq-answer"><span class="pq-mark">A —</span><p>Because rivalry here is amplified by high sunk costs, near-identical services, and a market where a single major move — Jio's entry, a tariff hike, a 5G push — forces an immediate, industry-wide response rather than a slow, gradual adjustment.</p></div>
+              <div class="ceo-box">
+                <h4>What would a telecom CEO do?</h4>
+                <ul>
+                  <li>Avoid unsustainable price wars.</li>
+                  <li>Invest selectively in network quality.</li>
+                  <li>Increase customer lifetime value.</li>
+                </ul>
+              </div>
+
+              <details class="professor-q">
+                <summary><span class="pq-mark">Q —</span><span class="pq-q">Isn't intense competition normal in any market? Why call this "very high"?</span></summary>
+                <div class="pq-answer"><span class="pq-mark">A —</span><p>Because rivalry here is amplified by high sunk costs, near-identical services, and a market where a single major move — Jio's entry, a tariff hike, a 5G push — forces an immediate, industry-wide response rather than a slow, gradual adjustment.</p></div>
+              </details>
+            </div>
           </details>
         </div>
         <div class="visual-card">
@@ -932,14 +1113,6 @@
           <div class="evidence-badge"><span class="eb-tag">Industry Evidence</span><span class="eb-text">Spectrum + capital + infrastructure barriers</span></div>
           <p>Entering India's mobile telecom market at national scale is difficult because it demands spectrum access, regulatory approval, enormous upfront capital, and infrastructure built out across a subcontinent-sized geography before a single rupee of steady revenue arrives. Existing operators also carry the advantage of scale and an installed customer base that a newcomer cannot replicate quickly.</p>
 
-          <div class="case-study">
-            <span class="cs-label">Real Example</span>
-            <span class="cs-title">Jio's Entry — Proof of Concept, Not Proof of Ease</span>
-            <div class="cs-row"><h5>What happened</h5><p>Reliance Jio is the only company to have successfully entered India's mobile market at national scale in the last decade — backed by tens of billions of dollars in group capital, dedicated spectrum acquisition, and a purpose-built all-IP network.</p></div>
-            <div class="cs-row"><h5>Entry ≠ successful scale</h5><p>Jio proves that entry is possible — but only with extraordinary capital, spectrum access, technology investment and long-term strategic commitment that almost no other company can match.</p></div>
-            <div class="cs-row"><h5>Business lesson</h5><p>The real barrier is not launching a telecom service. The real barrier is building a nationwide network and surviving the economics required to scale it.</p></div>
-          </div>
-
           <p class="visual-label" style="margin-top:1.4rem;">The path from entry to returns</p>
           <div class="ladder">
             <div class="ladder-step start">ENTER MARKET</div>
@@ -962,17 +1135,30 @@
             <p>Small or niche entrants may appear around specialized services, but becoming a nationwide mobile operator is highly difficult.</p>
           </div>
 
-          <div class="ceo-box">
-            <h4>What would a telecom CEO do?</h4>
-            <ul>
-              <li>Use scale and capital as barriers.</li>
-              <li>Focus on efficient capital allocation.</li>
-            </ul>
-          </div>
+          <details class="read-more">
+            <summary>Case study, CEO view &amp; professor's question</summary>
+            <div class="rm-body">
+              <div class="case-study">
+                <span class="cs-label">Real Example</span>
+                <span class="cs-title">Jio's Entry — Proof of Concept, Not Proof of Ease</span>
+                <div class="cs-row"><h5>What happened</h5><p>Reliance Jio is the only company to have successfully entered India's mobile market at national scale in the last decade — backed by tens of billions of dollars in group capital, dedicated spectrum acquisition, and a purpose-built all-IP network.</p></div>
+                <div class="cs-row"><h5>Entry ≠ successful scale</h5><p>Jio proves that entry is possible — but only with extraordinary capital, spectrum access, technology investment and long-term strategic commitment that almost no other company can match.</p></div>
+                <div class="cs-row"><h5>Business lesson</h5><p>The real barrier is not launching a telecom service. The real barrier is building a nationwide network and surviving the economics required to scale it.</p></div>
+              </div>
 
-          <details class="professor-q">
-            <summary><span class="pq-mark">Q —</span><span class="pq-q">If Jio entered successfully, why is entry threat LOW?</span></summary>
-            <div class="pq-answer"><span class="pq-mark">A —</span><p>Because Jio demonstrates that entry is possible, not that entry is easy. Its entry required extraordinary capital, spectrum and infrastructure investment that few companies in the world could replicate.</p></div>
+              <div class="ceo-box">
+                <h4>What would a telecom CEO do?</h4>
+                <ul>
+                  <li>Use scale and capital as barriers.</li>
+                  <li>Focus on efficient capital allocation.</li>
+                </ul>
+              </div>
+
+              <details class="professor-q">
+                <summary><span class="pq-mark">Q —</span><span class="pq-q">If Jio entered successfully, why is entry threat LOW?</span></summary>
+                <div class="pq-answer"><span class="pq-mark">A —</span><p>Because Jio demonstrates that entry is possible, not that entry is easy. Its entry required extraordinary capital, spectrum and infrastructure investment that few companies in the world could replicate.</p></div>
+              </details>
+            </div>
           </details>
         </div>
         <div class="visual-card">
@@ -1010,12 +1196,6 @@
             <div class="mc-note">Source: TRAI. A request signals intent to switch — not every request results in a completed port.</div>
           </div>
 
-          <div class="case-study">
-            <span class="cs-label">Business Example</span>
-            <span class="cs-title">Plan Revisions Trigger Immediate Comparison</span>
-            <div class="cs-row"><h5>What happens</h5><p>When operators revise recharge plans, customers can immediately compare alternatives across Jio, Airtel, Vi and BSNL — number portability means that comparison can turn into an actual switch within days, not months.</p></div>
-          </div>
-
           <p class="visual-label" style="margin-top:1.4rem;">Customer power flow — click a step</p>
           <div class="flow-row" id="flowRow">
             <button class="flow-step" data-step="0">Compare</button>
@@ -1037,19 +1217,30 @@
             <p>An operator cannot rely on customer inertia alone. It must continuously justify the customer's monthly spend through network quality, pricing, bundles and service.</p>
           </div>
 
-          <div class="ceo-box">
-            <h4>What would a telecom CEO do?</h4>
-            <ul>
-              <li>Reduce churn.</li>
-              <li>Improve customer experience.</li>
-              <li>Bundle services.</li>
-              <li>Create reasons to stay.</li>
-            </ul>
-          </div>
+          <details class="read-more">
+            <summary>Case study, CEO view &amp; professor's question</summary>
+            <div class="rm-body">
+              <div class="case-study">
+                <span class="cs-label">Business Example</span>
+                <span class="cs-title">Plan Revisions Trigger Immediate Comparison</span>
+                <div class="cs-row"><h5>What happens</h5><p>When operators revise recharge plans, customers can immediately compare alternatives across Jio, Airtel, Vi and BSNL — number portability means that comparison can turn into an actual switch within days, not months.</p></div>
+              </div>
 
-          <details class="professor-q">
-            <summary><span class="pq-mark">Q —</span><span class="pq-q">If customers can switch so easily, why isn't buyer power VERY HIGH?</span></summary>
-            <div class="pq-answer"><span class="pq-mark">A —</span><p>Because switching still carries some friction — comparing coverage in a specific area, evaluating bundled perks, and occasional promotional lock-in periods — so operators retain real ability to differentiate and retain customers rather than compete on price alone.</p></div>
+              <div class="ceo-box">
+                <h4>What would a telecom CEO do?</h4>
+                <ul>
+                  <li>Reduce churn.</li>
+                  <li>Improve customer experience.</li>
+                  <li>Bundle services.</li>
+                  <li>Create reasons to stay.</li>
+                </ul>
+              </div>
+
+              <details class="professor-q">
+                <summary><span class="pq-mark">Q —</span><span class="pq-q">If customers can switch so easily, why isn't buyer power VERY HIGH?</span></summary>
+                <div class="pq-answer"><span class="pq-mark">A —</span><p>Because switching still carries some friction — comparing coverage in a specific area, evaluating bundled perks, and occasional promotional lock-in periods — so operators retain real ability to differentiate and retain customers rather than compete on price alone.</p></div>
+              </details>
+            </div>
           </details>
         </div>
         <div class="visual-card">
@@ -1078,13 +1269,6 @@
           <div class="evidence-badge"><span class="eb-tag">Industry Evidence</span><span class="eb-text">Specialised network equipment ecosystem</span></div>
           <p>Supplier power is moderate because operators depend on a relatively small pool of specialised vendors for network equipment and technology, yet the purchasing scale of India's largest operators gives them real negotiating leverage that a smaller buyer would not have.</p>
 
-          <div class="case-study">
-            <span class="cs-label">Case</span>
-            <span class="cs-title">Equipment Cannot Be Replaced Overnight</span>
-            <div class="cs-row"><h5>The dependency</h5><p>Switching core network suppliers mid-deployment is rarely simple. It typically involves technical integration work, compatibility testing across existing infrastructure, deployment risk during the transition, real switching costs, and long-term contracts that lock in a vendor relationship for years.</p></div>
-            <div class="cs-row"><h5>The balance</h5><p>Large operators have significant purchasing volumes, giving them stronger negotiating leverage than a small entrant could ever access.</p></div>
-          </div>
-
           <p class="visual-label" style="margin-top:1.4rem;">Supplier categories — click one</p>
           <div class="supcat-grid" id="supcatGrid">
             <button class="supcat-btn is-active" data-cat="equipment">Network Equipment</button>
@@ -1101,18 +1285,30 @@
             <p>Supplier power is moderate because operators are dependent on specialised technology, but scale gives major operators procurement power.</p>
           </div>
 
-          <div class="ceo-box">
-            <h4>What would a telecom CEO do?</h4>
-            <ul>
-              <li>Diversify suppliers where practical.</li>
-              <li>Negotiate long-term contracts.</li>
-              <li>Use procurement scale.</li>
-            </ul>
-          </div>
+          <details class="read-more">
+            <summary>Case study, CEO view &amp; professor's question</summary>
+            <div class="rm-body">
+              <div class="case-study">
+                <span class="cs-label">Case</span>
+                <span class="cs-title">Equipment Cannot Be Replaced Overnight</span>
+                <div class="cs-row"><h5>The dependency</h5><p>Switching core network suppliers mid-deployment is rarely simple. It typically involves technical integration work, compatibility testing across existing infrastructure, deployment risk during the transition, real switching costs, and long-term contracts that lock in a vendor relationship for years.</p></div>
+                <div class="cs-row"><h5>The balance</h5><p>Large operators have significant purchasing volumes, giving them stronger negotiating leverage than a small entrant could ever access.</p></div>
+              </div>
 
-          <details class="professor-q">
-            <summary><span class="pq-mark">Q —</span><span class="pq-q">If telecom operators depend on specialised vendors, why isn't supplier power HIGH?</span></summary>
-            <div class="pq-answer"><span class="pq-mark">A —</span><p>Because large operators have enormous purchasing scale, can negotiate long-term contracts, and supplier dependence is balanced by the size and bargaining power of the operators themselves.</p></div>
+              <div class="ceo-box">
+                <h4>What would a telecom CEO do?</h4>
+                <ul>
+                  <li>Diversify suppliers where practical.</li>
+                  <li>Negotiate long-term contracts.</li>
+                  <li>Use procurement scale.</li>
+                </ul>
+              </div>
+
+              <details class="professor-q">
+                <summary><span class="pq-mark">Q —</span><span class="pq-q">If telecom operators depend on specialised vendors, why isn't supplier power HIGH?</span></summary>
+                <div class="pq-answer"><span class="pq-mark">A —</span><p>Because large operators have enormous purchasing scale, can negotiate long-term contracts, and supplier dependence is balanced by the size and bargaining power of the operators themselves.</p></div>
+              </details>
+            </div>
           </details>
         </div>
         <div class="visual-card">
@@ -1176,18 +1372,23 @@
             <p>Telecom operators should not fight substitutes by protecting legacy voice/SMS revenue. They should capture value from the data connectivity on which digital communication depends.</p>
           </div>
 
-          <div class="ceo-box">
-            <h4>What would a telecom CEO do?</h4>
-            <ul>
-              <li>Monetise data.</li>
-              <li>Build digital ecosystem partnerships.</li>
-              <li>Move away from dependence on legacy voice/SMS.</li>
-            </ul>
-          </div>
+          <details class="read-more">
+            <summary>CEO view &amp; professor's question</summary>
+            <div class="rm-body">
+              <div class="ceo-box">
+                <h4>What would a telecom CEO do?</h4>
+                <ul>
+                  <li>Monetise data.</li>
+                  <li>Build digital ecosystem partnerships.</li>
+                  <li>Move away from dependence on legacy voice/SMS.</li>
+                </ul>
+              </div>
 
-          <details class="professor-q">
-            <summary><span class="pq-mark">Q —</span><span class="pq-q">If WhatsApp replaces calls, why isn't substitute threat HIGH?</span></summary>
-            <div class="pq-answer"><span class="pq-mark">A —</span><p>Because WhatsApp still depends on mobile data connectivity. It substitutes the service carried over the network, not the underlying network itself.</p></div>
+              <details class="professor-q">
+                <summary><span class="pq-mark">Q —</span><span class="pq-q">If WhatsApp replaces calls, why isn't substitute threat HIGH?</span></summary>
+                <div class="pq-answer"><span class="pq-mark">A —</span><p>Because WhatsApp still depends on mobile data connectivity. It substitutes the service carried over the network, not the underlying network itself.</p></div>
+              </details>
+            </div>
           </details>
         </div>
         <div class="visual-card">
@@ -1205,53 +1406,11 @@
   </div>
 </section>
 
-<!-- ============ WHY THESE RATINGS ============ -->
-<section class="section-pad" id="ratings">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="eyebrow">04 — Rating Logic</span>
-      <h2>Why these ratings?</h2>
-      <p class="lede">Click a pressure level to see what generally drives it, what it means for profitability, and how a company should respond.</p>
-    </div>
-    <div class="scale-track reveal" id="scaleTrack">
-      <button class="scale-seg" data-level="low">Low</button>
-      <button class="scale-seg" data-level="moderate">Moderate</button>
-      <button class="scale-seg" data-level="high">High</button>
-      <button class="scale-seg" data-level="veryhigh">Very High</button>
-    </div>
-    <div class="scale-detail reveal" id="scaleDetail"></div>
-  </div>
-</section>
-
-<!-- ============ STRATEGIC INSIGHTS ============ -->
-<section class="section-pad alt-bg" id="insights">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="eyebrow">05 — Strategic Insights</span>
-      <h2>What the evidence adds up to</h2>
-    </div>
-    <div class="insight-grid reveal reveal-stagger">
-      <div class="insight-callout" style="--i:0">
-        <span class="ic-num">Insight 01</span>
-        <p>"High barriers to entry protect incumbents — but do not guarantee high profitability."</p>
-      </div>
-      <div class="insight-callout" style="--i:1">
-        <span class="ic-num">Insight 02</span>
-        <p>"In telecom, network investment is simultaneously a cost and a competitive weapon."</p>
-      </div>
-      <div class="insight-callout" style="--i:2">
-        <span class="ic-num">Insight 03</span>
-        <p>"Customer switching power means scale alone is not enough; operators must continuously justify customer spend."</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ============ HEATMAP ============ -->
 <section class="section-pad" id="heatmap">
   <div class="container">
     <div class="section-head reveal">
-      <span class="eyebrow">06 — Strategic Heatmap</span>
+      <span class="eyebrow">Porter · Strategic Heatmap</span>
       <h2>Pressure and profitability at a glance</h2>
       <p class="lede">Click any row to jump to its full analysis above.</p>
     </div>
@@ -1269,7 +1428,7 @@
 <section class="section-pad" id="story">
   <div class="container col-narrow">
     <div class="section-head reveal">
-      <span class="eyebrow">07 — The Strategic Story</span>
+      <span class="eyebrow">Porter · The Strategic Contradiction</span>
       <h2>Reading the forces together</h2>
       <p class="lede">Individually, each force tells a partial story. The real insight is in how they combine.</p>
     </div>
@@ -1307,60 +1466,372 @@
       <div class="story-box reveal" style="background:var(--navy);border-color:var(--navy);">
         <div class="story-title" style="color:var(--paper);">SCALE + NETWORK QUALITY + CUSTOMER RETENTION + CAPITAL DISCIPLINE + DIGITAL ECOSYSTEM</div>
       </div>
+      <div class="story-arrow reveal">↓</div>
+      <div class="story-box accent reveal">
+        <div class="story-title">INDUSTRY = DIFFICULT</div>
+      </div>
     </div>
     <p class="story-close reveal">Industry structure provides protection, but <b>execution determines who captures the value</b>.</p>
+    <div class="metric-card reveal" style="margin-top:2rem;max-width:480px;margin-left:auto;margin-right:auto;">
+      <div class="mc-num" style="font-size:clamp(1.25rem,3vw,1.55rem);">MODERATELY UNATTRACTIVE<br>/ DIFFICULT</div>
+      <div class="mc-label">Overall Porter Verdict</div>
+    </div>
   </div>
 </section>
 
-<!-- ============ CONCLUSION ============ -->
-<section class="section-pad alt-bg" id="conclusion">
-  <div class="container col-narrow">
+<!-- ============ 04 — PORTER TO SWOT TRANSITION ============ -->
+<section class="transition-block" id="porter-swot">
+  <div class="container">
     <div class="section-head reveal">
-      <span class="eyebrow">08 — Executive Conclusion</span>
-      <h2>Overall assessment</h2>
+      <span class="eyebrow">04 — From Industry to Company</span>
+      <h2>Porter tells us the battlefield. Now we ask: where does Jio stand on it?</h2>
     </div>
-    <div class="conclusion-card reveal">
-      <span class="verdict-label">Overall Industry Attractiveness</span>
-      <h2>MODERATELY UNATTRACTIVE <span>/ DIFFICULT</span></h2>
-      <div class="conclusion-body">
-        <p>Indian telecom is a difficult industry to earn attractive returns in — not because new competitors can easily enter, but because the existing players are locked into an expensive fight for customers.</p>
-        <ul class="story-list" style="margin-left:0;margin-right:0;">
-          <li>Entry barriers protect the incumbents.</li>
-          <li>Rivalry destroys some of that protection.</li>
-          <li>Buyer power keeps pricing under pressure.</li>
-          <li>Supplier power creates ongoing network costs.</li>
-          <li>Substitutes shift value from traditional voice/SMS toward data.</li>
-        </ul>
-        <p><b>The industry's most defensible advantage is therefore not simply having subscribers.</b> It is having enough scale, network quality, customer loyalty and capital efficiency to monetise those subscribers sustainably.</p>
+    <div class="tmap-grid reveal reveal-stagger">
+      <div class="tmap-card" style="--i:0"><span class="tmap-label">Porter finding</span><span class="tmap-porter">HIGH RIVALRY</span><span class="tmap-arrow">↓</span><span class="tmap-swot"><b>SWOT Threat</b> — Airtel competition</span></div>
+      <div class="tmap-card" style="--i:1"><span class="tmap-label">Porter finding</span><span class="tmap-porter">HIGH BUYER POWER</span><span class="tmap-arrow">↓</span><span class="tmap-swot"><b>SWOT Threat</b> — Switching + price sensitivity</span></div>
+      <div class="tmap-card" style="--i:2"><span class="tmap-label">Porter finding</span><span class="tmap-porter">LOW NEW-ENTRY THREAT</span><span class="tmap-arrow">↓</span><span class="tmap-swot"><b>SWOT Strength</b> — Scale + infrastructure barriers</span></div>
+      <div class="tmap-card" style="--i:3"><span class="tmap-label">Porter finding</span><span class="tmap-porter">MODERATE SUBSTITUTES</span><span class="tmap-arrow">↓</span><span class="tmap-swot"><b>SWOT Opportunity</b> — Move value toward data + digital services</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 05 — SWOT ============ -->
+<section class="section-pad" id="swot">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">05 — SWOT Analysis</span>
+      <h2>Now move from the industry to Jio.</h2>
+      <p class="lede">SWOT converts the external pressures identified by Porter into Jio-specific strengths, weaknesses, opportunities and threats.</p>
+    </div>
+    <div class="swot-grid reveal reveal-stagger">
+      <div class="swot-quad strength" style="--i:0">
+        <h3>Strengths <span class="swq-tag">INTERNAL · POSITIVE</span></h3>
+        <div class="swot-item">
+          <div class="si-head"><span class="si-num">01</span><span class="si-title">Market Scale</span></div>
+          <div class="si-stats"><span class="si-stat">506.03M</span><span class="si-stat">39.29%</span></div>
+          <p>Jio is India's largest mobile operator by subscribers.</p>
+          <p class="si-but"><b>BUT —</b> Airtel trails by fewer than 17M subscribers, so leadership is not a wide moat.</p>
+        </div>
+        <div class="swot-item">
+          <div class="si-head"><span class="si-num">02</span><span class="si-title">Financial Scale</span></div>
+          <div class="si-stats"><span class="si-stat">₹76,255 Cr</span><span class="si-stat">FY26 EBITDA</span></div>
+          <p>Strong profitability supports continued investment.</p>
+          <p class="si-but"><b>BUT —</b> telecom demands continuous, not one-time, capital deployment.</p>
+        </div>
+        <div class="swot-item">
+          <div class="si-head"><span class="si-num">03</span><span class="si-title">5G + Technology</span></div>
+          <div class="si-stats"><span class="si-stat">268M+</span><span class="si-stat">6,817 patents</span></div>
+          <p>Jio has built both network scale and internal technology capability — 6,817 cumulative patent filings by Jio Platforms and subsidiaries.</p>
+          <p class="si-but"><b>BUT —</b> Airtel also has major 5G capability, so scale alone does not guarantee lasting differentiation.</p>
+        </div>
+        <details class="swot-more"><summary>View more strengths</summary>
+          <div class="swot-item"><p><b>Digital ecosystem reach</b> — JioHotstar, JioMart and JioFinance create cross-sell surface area beyond connectivity.</p></div>
+          <div class="swot-item"><p><b>Early broadband foothold</b> — AirFiber gives Jio a head start in home connectivity alongside mobile.</p></div>
+        </details>
+      </div>
+
+      <div class="swot-quad weakness" style="--i:1">
+        <h3>Weaknesses <span class="swq-tag">INTERNAL · NEGATIVE</span></h3>
+        <div class="swot-item">
+          <div class="si-head"><span class="si-num">01</span><span class="si-title">Capital Intensity</span></div>
+          <div class="si-stats"><span class="si-stat">₹34,492 Cr</span><span class="si-stat">network opex</span></div>
+          <p>Sustaining network leadership requires continuous, heavy operating spend.</p>
+        </div>
+        <div class="swot-item">
+          <div class="si-head"><span class="si-num">02</span><span class="si-title">ARPU Monetisation</span></div>
+          <div class="si-stats"><span class="si-stat">₹214/month</span></div>
+          <p>Large subscriber scale does not automatically mean high value per customer.</p>
+        </div>
+        <div class="swot-item">
+          <div class="si-head"><span class="si-num">03</span><span class="si-title">Airtel Gap Is Small</span></div>
+          <div class="si-stats"><span class="si-stat">Jio 506.03M</span><span class="si-stat">Airtel 489.49M</span></div>
+          <p>Leadership exists, but it is not unassailable.</p>
+        </div>
+        <details class="swot-more"><summary>View more weaknesses</summary>
+          <div class="swot-item"><p><b>Ecosystem complexity</b> — running mobile, broadband, retail and media businesses together raises execution risk.</p></div>
+          <div class="swot-item"><p><b>Group dependence</b> — continued network investment relies on ongoing support from Reliance's broader balance sheet.</p></div>
+        </details>
+      </div>
+
+      <div class="swot-quad opportunity" style="--i:2">
+        <h3>Opportunities <span class="swq-tag">EXTERNAL · POSITIVE</span></h3>
+        <div class="swot-item">
+          <div class="si-head"><span class="si-num">01</span><span class="si-title">5G Monetisation</span></div>
+          <div class="si-stats"><span class="si-stat">268M+ users</span></div>
+          <p>Rollout is largely done; the next phase is turning usage into premium and enterprise revenue.</p>
+          <p class="si-but"><b>BUT —</b> converting 5G usage into higher ARPU has been slower, industry-wide, than rollout itself.</p>
+        </div>
+        <div class="swot-item">
+          <div class="si-head"><span class="si-num">02</span><span class="si-title">Home Broadband</span></div>
+          <div class="si-stats"><span class="si-stat">27M+</span><span class="si-stat">~43% share</span></div>
+          <p>AirFiber gives Jio an early lead in a category still being built out nationally.</p>
+        </div>
+        <div class="swot-item">
+          <div class="si-head"><span class="si-num">03</span><span class="si-title">Enterprise + AI + Cloud + IoT</span></div>
+          <p>Digital B2B services extend Jio beyond a pure connectivity business.</p>
+          <p class="si-but"><b>BUT —</b> these are early-stage bets against established enterprise IT players.</p>
+        </div>
+        <details class="swot-more"><summary>View more opportunities</summary>
+          <div class="swot-item"><p><b>Content bundling</b> — JioHotstar and entertainment bundles can raise stickiness on top of the core plan.</p></div>
+          <div class="swot-item"><p><b>Fixed-mobile convergence</b> — selling mobile and home broadband together increases wallet share per household.</p></div>
+        </details>
+      </div>
+
+      <div class="swot-quad threat" style="--i:3">
+        <h3>Threats <span class="swq-tag">EXTERNAL · NEGATIVE</span></h3>
+        <div class="swot-item">
+          <div class="si-head"><span class="si-num">01</span><span class="si-title">Airtel</span></div>
+          <div class="si-stats"><span class="si-stat">38.01%</span><span class="si-stat">July 2026</span></div>
+          <p>The nearest rival is closing the gap, not falling behind.</p>
+        </div>
+        <div class="swot-item">
+          <div class="si-head"><span class="si-num">02</span><span class="si-title">Customer Switching</span></div>
+          <div class="si-stats"><span class="si-stat">15.98M</span><span class="si-stat">MNP requests, July 2026</span></div>
+          <p>Switching activity has grown since February's 14.47M, keeping retention a live concern.</p>
+        </div>
+        <div class="swot-item">
+          <div class="si-head"><span class="si-num">03</span><span class="si-title">Capex + Technology Race</span></div>
+          <p>Leadership requires continuous investment — falling behind on 5G or fibre build-out would erode the scale advantage quickly.</p>
+        </div>
+        <details class="swot-more"><summary>View more threats</summary>
+          <div class="swot-item"><p><b>Regulatory / spectrum cost risk</b> — future spectrum auctions add unpredictable capital demands.</p></div>
+          <div class="swot-item"><p><b>Vi's recovery potential</b> — fresh capital into Vodafone Idea could reintroduce a third aggressive competitor.</p></div>
+        </details>
+      </div>
+    </div>
+
+    <div class="section-head reveal" style="margin-top:clamp(3rem,6vw,4.4rem);">
+      <span class="eyebrow">From SWOT to Strategy</span>
+      <h2>SWOT is useful only if it changes the decision.</h2>
+    </div>
+    <div class="matrix-grid reveal reveal-stagger">
+      <div class="matrix-card" style="--i:0"><span class="mx-tag">SO</span><h4>Use strengths to capture opportunities</h4><p>Use scale, 5G and financial capacity to monetise premium 5G and enterprise services.</p></div>
+      <div class="matrix-card" style="--i:1"><span class="mx-tag">ST</span><h4>Use strengths to defend against threats</h4><p>Use network, technology and ecosystem depth to defend against Airtel without relying only on price.</p></div>
+      <div class="matrix-card" style="--i:2"><span class="mx-tag">WO</span><h4>Use opportunities to fix weaknesses</h4><p>Use broadband, enterprise and digital services to increase value per customer.</p></div>
+      <div class="matrix-card" style="--i:3"><span class="mx-tag">WT</span><h4>Reduce weaknesses while limiting threats</h4><p>Maintain capex discipline and avoid destructive price competition.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 06 — SWOT TO VRIO TRANSITION ============ -->
+<section class="transition-block" id="swot-vrio">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">06 — Testing the Strengths</span>
+      <h2>SWOT tells us what Jio is good at. VRIO asks whether those strengths are actually a moat.</h2>
+      <p class="lede" style="color:#B7C2DE;">VRIO tests whether a resource is <b style="color:#F3D9DD;">V</b>aluable, <b style="color:#F3D9DD;">R</b>are, difficult to <b style="color:#F3D9DD;">I</b>mitate, and supported by the <b style="color:#F3D9DD;">O</b>rganisation.</p>
+    </div>
+    <div class="rtest-grid reveal reveal-stagger">
+      <div class="rtest-card" style="--i:0">
+        <span class="rt-start">JIO HAS SCALE</span>
+        <div class="rtest-q"><span class="rq-q">Is it valuable?</span><span class="rq-a">YES</span></div>
+        <div class="rtest-q"><span class="rq-q">Is it rare?</span><span class="rq-a">RELATIVELY</span></div>
+        <div class="rtest-q"><span class="rq-q">Can rivals copy it quickly?</span><span class="rq-a">NOT QUICKLY</span></div>
+        <div class="rtest-q"><span class="rq-q">Is Jio organised to exploit it?</span><span class="rq-a">YES</span></div>
+        <span class="rt-end">COMPETITIVE ADVANTAGE</span>
+      </div>
+      <div class="rtest-card" style="--i:1">
+        <span class="rt-start">JIO HAS TECHNOLOGY / IP</span>
+        <div class="rtest-q"><span class="rq-q">Is it valuable?</span><span class="rq-a">YES</span></div>
+        <div class="rtest-q"><span class="rq-q">Is it rare?</span><span class="rq-a">YES</span></div>
+        <div class="rtest-q"><span class="rq-q">Can rivals copy it quickly?</span><span class="rq-a">NO</span></div>
+        <div class="rtest-q"><span class="rq-q">Is Jio organised to exploit it?</span><span class="rq-a">YES</span></div>
+        <span class="rt-end">POTENTIAL SUSTAINED ADVANTAGE</span>
+      </div>
+      <div class="rtest-card" style="--i:2">
+        <span class="rt-start">JIO HAS SPECTRUM</span>
+        <div class="rtest-q"><span class="rq-q">Is it valuable?</span><span class="rq-a">YES</span></div>
+        <div class="rtest-q"><span class="rq-q">Is it rare?</span><span class="rq-a">YES</span></div>
+        <div class="rtest-q"><span class="rq-q">Can rivals copy it quickly?</span><span class="rq-a">ONLY WITH CAPITAL</span></div>
+        <div class="rtest-q"><span class="rq-q">Is Jio organised to exploit it?</span><span class="rq-a">YES</span></div>
+        <span class="rt-end">STRONG ADVANTAGE</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ EVIDENCE & REFERENCES ============ -->
-<section class="section-pad alt-bg" id="evidence">
+<!-- ============ 07 — VRIO ============ -->
+<section class="section-pad alt-bg" id="vrio">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">07 — VRIO Analysis</span>
+      <h2>Not every Jio strength is a moat.</h2>
+      <p class="lede">VRIO tests whether a resource is Valuable, Rare, difficult to Imitate and supported by the Organisation. Click a row for the full reasoning.</p>
+    </div>
+    <div class="vrio-wrap reveal">
+      <div class="vrio-table-wrap">
+        <table class="vrio-table" id="vrioTable">
+          <thead><tr><th>Resource</th><th class="vc">V</th><th class="vc">R</th><th class="vc">I</th><th class="vc">O</th><th>Result</th></tr></thead>
+          <tbody id="vrioBody"></tbody>
+        </table>
+      </div>
+      <div class="vrio-drawer" id="vrioDrawer"></div>
+    </div>
+    <p class="vrio-note reveal">VRIO results are relative to competitors. Airtel's own capabilities mean that Jio's 5G scale alone should not automatically be treated as a sustained moat.</p>
+  </div>
+</section>
+
+<!-- ============ 08 — THE JIO MOAT ============ -->
+<section class="section-pad" id="moat">
+  <div class="container">
+    <div class="section-head reveal" style="margin-left:auto;margin-right:auto;text-align:center;align-items:center;">
+      <span class="eyebrow">08 — The Jio Moat</span>
+      <h2>Jio's moat is the combination.</h2>
+    </div>
+    <div class="moat-wrap reveal">
+      <svg class="moat-svg" viewBox="0 0 600 600" role="img" aria-label="Diagram showing Spectrum, Network Scale, 500M+ Users, Proprietary Technology, 5G, Fixed Broadband and Digital Ecosystem converging on a defensible competitive position">
+        <line class="moat-line" x1="300" y1="80" x2="300" y2="192"></line>
+        <line class="moat-line" x1="472" y1="163" x2="378" y2="238"></line>
+        <line class="moat-line" x1="515" y1="349" x2="394" y2="322"></line>
+        <line class="moat-line" x1="396" y1="498" x2="345" y2="384"></line>
+        <line class="moat-line" x1="205" y1="498" x2="255" y2="384"></line>
+        <line class="moat-line" x1="86" y1="349" x2="206" y2="322"></line>
+        <line class="moat-line" x1="128" y1="163" x2="222" y2="238"></line>
+
+        <circle class="moat-center-circle" cx="300" cy="300" r="98"></circle>
+        <text class="moat-center-text" x="300" y="292">DEFENSIBLE</text>
+        <text class="moat-center-text" x="300" y="308">COMPETITIVE</text>
+        <text class="moat-center-text" x="300" y="324">POSITION</text>
+
+        <g><circle class="moat-node-bg" cx="300" cy="80" r="46"></circle><text class="moat-node-text" x="300" y="84">SPECTRUM</text></g>
+        <g><circle class="moat-node-bg" cx="472" cy="163" r="46"></circle><text class="moat-node-text" x="472" y="159">NETWORK</text><text class="moat-node-text" x="472" y="171">SCALE</text></g>
+        <g><circle class="moat-node-bg" cx="515" cy="349" r="46"></circle><text class="moat-node-text" x="515" y="345">500M+</text><text class="moat-node-text" x="515" y="357">USERS</text></g>
+        <g><circle class="moat-node-bg" cx="396" cy="498" r="46"></circle><text class="moat-node-text" x="396" y="493" font-size="9">PROPRIETARY</text><text class="moat-node-text" x="396" y="505" font-size="9">TECHNOLOGY</text></g>
+        <g><circle class="moat-node-bg" cx="205" cy="498" r="46"></circle><text class="moat-node-text" x="205" y="503" font-size="13">5G</text></g>
+        <g><circle class="moat-node-bg" cx="86" cy="349" r="46"></circle><text class="moat-node-text" x="86" y="345">FIXED</text><text class="moat-node-text" x="86" y="357">BROADBAND</text></g>
+        <g><circle class="moat-node-bg" cx="128" cy="163" r="46"></circle><text class="moat-node-text" x="128" y="159">DIGITAL</text><text class="moat-node-text" x="128" y="171">ECOSYSTEM</text></g>
+      </svg>
+    </div>
+    <p class="moat-lede reveal">Jio's strongest advantage does not come from one resource. It comes from resources <b>reinforcing one another</b>.</p>
+  </div>
+</section>
+
+<!-- ============ 09 — EVIDENCE ============ -->
+<section class="section-pad alt-bg" id="evidence-metrics">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">09 — Evidence</span>
+      <h2>The numbers behind the strategy</h2>
+    </div>
+    <div class="cluster-grid reveal reveal-stagger" style="margin-bottom:2.6rem;">
+      <div class="cluster-card" style="--i:0">
+        <span class="cl-tag">Financial — FY26</span>
+        <div class="cl-metric"><div class="cl-num">₹146,885 Cr</div><div class="cl-label">Operating revenue</div></div>
+        <div class="cl-metric"><div class="cl-num">₹76,255 Cr</div><div class="cl-label">EBITDA</div></div>
+        <div class="cl-metric"><div class="cl-num">₹30,049 Cr</div><div class="cl-label">Profit after tax</div></div>
+        <p style="margin-top:0.9rem;font-size:0.76rem;color:var(--ink-faint);font-family:var(--mono);">Jio Platforms Limited · FY26</p>
+      </div>
+      <div class="cluster-card" style="--i:1">
+        <span class="cl-tag">5G / Data</span>
+        <div class="cl-metric"><div class="cl-num">268M+</div><div class="cl-label">5G users on Jio's network</div></div>
+        <div class="cl-metric"><div class="cl-num">241 EB</div><div class="cl-label">FY26 total data traffic</div></div>
+        <div class="cl-metric"><div class="cl-num">42.3 GB</div><div class="cl-label">Data used per subscriber, per month</div></div>
+        <p style="margin-top:0.9rem;font-size:0.76rem;color:var(--ink-faint);font-family:var(--mono);">Jio · FY26</p>
+      </div>
+      <div class="cluster-card" style="--i:2">
+        <span class="cl-tag">Broadband</span>
+        <div class="cl-metric"><div class="cl-num">27M+</div><div class="cl-label">Fixed broadband connections</div></div>
+        <div class="cl-metric"><div class="cl-num">~43%</div><div class="cl-label">Fixed broadband market share</div></div>
+        <div class="cl-metric"><div class="cl-num">~13M</div><div class="cl-label">AirFiber connections</div></div>
+        <p style="margin-top:0.9rem;font-size:0.76rem;color:var(--ink-faint);font-family:var(--mono);">Jio / TRAI</p>
+      </div>
+    </div>
+
+    <div class="chart-grid-2 reveal reveal-stagger">
+      <div class="chart-block" style="--i:0">
+        <p class="chart-headline">Jio leads July 2026 — but Airtel is close behind.</p>
+        <div class="chart-bar-row op-jio" style="--pct:100%"><span class="cb-name">JIO</span><div class="chart-bar-track"><div class="chart-bar-fill"></div></div><span class="cb-val">506.03M</span></div>
+        <div class="chart-bar-row op-airtel" style="--pct:96.7%"><span class="cb-name">AIRTEL</span><div class="chart-bar-track"><div class="chart-bar-fill"></div></div><span class="cb-val">489.49M</span></div>
+        <div class="chart-bar-row op-vi" style="--pct:39.3%"><span class="cb-name">VI</span><div class="chart-bar-track"><div class="chart-bar-fill"></div></div><span class="cb-val">199.06M</span></div>
+        <div class="chart-bar-row op-bsnl" style="--pct:18.4%"><span class="cb-name">BSNL</span><div class="chart-bar-track"><div class="chart-bar-fill"></div></div><span class="cb-val">93.18M</span></div>
+        <p class="chart-insight">Jio: 39.29% share · Airtel: 38.01% share · Vi: 15.46% share · BSNL: 7.23% share. Source: TRAI, July 2026.</p>
+      </div>
+      <div class="chart-block" style="--i:1">
+        <p class="chart-headline">Airtel is adding subscribers faster than Jio.</p>
+        <div class="chart-bar-row op-jio" style="--pct:91%"><span class="cb-name">JIO</span><div class="chart-bar-track"><div class="chart-bar-fill"></div></div><span class="cb-val">+2.446M</span></div>
+        <div class="chart-bar-row op-airtel" style="--pct:100%"><span class="cb-name">AIRTEL</span><div class="chart-bar-track"><div class="chart-bar-fill"></div></div><span class="cb-val">+2.688M</span></div>
+        <p class="chart-insight">Net subscriber additions, July 2026 — evidence of Airtel's competitive momentum even while Jio holds the larger base. Source: TRAI, July 2026.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 10 — STRATEGIC RECOMMENDATIONS ============ -->
+<section class="section-pad" id="recommendations">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">10 — Strategic Recommendations</span>
+      <h2>So what should Jio do next?</h2>
+    </div>
+    <div class="reco-grid reveal reveal-stagger">
+      <div class="reco-card" style="--i:0"><span class="rc-num">01</span><h3>Monetise 5G</h3><p>Move from deployment to premium and enterprise use cases now that coverage is largely built.</p></div>
+      <div class="reco-card" style="--i:1"><span class="rc-num">02</span><h3>Increase value per customer</h3><p>Focus on ARPU and customer lifetime value, not only subscriber count.</p></div>
+      <div class="reco-card" style="--i:2"><span class="rc-num">03</span><h3>Make AirFiber a household platform</h3><p>Bundle mobile, broadband, entertainment and digital services around the home, not just the individual.</p></div>
+      <div class="reco-card" style="--i:3"><span class="rc-num">04</span><h3>Turn technology into economic advantage</h3><p>Technology should produce lower costs, faster deployment or differentiated services — not just headline patents.</p></div>
+      <div class="reco-card" style="--i:4"><span class="rc-num">05</span><h3>Defend against Airtel without a price war</h3><p>Compete on experience, network quality, ecosystem and value — not just tariffs.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 11 — FINAL ANSWER ============ -->
+<section class="section-pad alt-bg" id="final">
   <div class="container col-narrow">
     <div class="section-head reveal">
-      <span class="eyebrow">09 — Evidence &amp; References</span>
+      <span class="eyebrow">11 — Final Answer</span>
+    </div>
+    <div class="final-answer-card reveal">
+      <p class="fa-thesis">Jio has already built <b>SCALE</b>. The next battle is <b>DEFENSIBILITY</b>.</p>
+      <div class="logic-chain">
+        <div class="logic-step"><span class="lc-tag">Porter</span><p class="lc-body">High rivalry + high buyer power</p></div>
+        <div class="logic-arrow">↓</div>
+        <div class="logic-step"><span class="lc-tag">SWOT</span><p class="lc-body">Scale is a strength · Airtel and switching are threats · 5G and broadband are opportunities</p></div>
+        <div class="logic-arrow">↓</div>
+        <div class="logic-step"><span class="lc-tag">VRIO</span><p class="lc-body">Spectrum + technology + scale + infrastructure + ecosystem</p></div>
+        <div class="logic-arrow">↓</div>
+        <div class="logic-step"><span class="lc-tag">Strategic priority</span><p class="lc-body">Monetise the installed base while protecting the moat.</p></div>
+      </div>
+      <p class="fa-close">Jio's advantage is strongest when scale, spectrum, proprietary technology and ecosystem integration reinforce one another.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 12 — SOURCES ============ -->
+<section class="section-pad" id="sources">
+  <div class="container col-narrow">
+    <div class="section-head reveal">
+      <span class="eyebrow">12 — Sources</span>
       <h2>Sources behind every claim</h2>
-      <p class="lede">Every data point in this analysis is sourced and dated. Case studies use publicly reported events; no statistic has been invented.</p>
+      <p class="lede">Every data point in this analysis is sourced and dated. No statistic has been invented.</p>
     </div>
-    <ul class="ref-list reveal">
-      <li><b>TRAI</b> (Telecom Regulatory Authority of India) — telecom subscription data reports.</li>
-      <li><b>TRAI</b> — Mobile Number Portability (MNP) statistics, February 2026 ("14.47M MNP requests — Feb 2026").</li>
-      <li>Public reporting on <b>Reliance Jio's</b> commercial launch, September 2016.</li>
-      <li>Public reporting on <b>Reliance Jio's</b> and <b>Bharti Airtel's</b> tariff revisions, July 2024.</li>
-      <li>Operator announcements on <b>5G network rollout</b> (Reliance Jio, Bharti Airtel).</li>
-    </ul>
-    <div class="evidence-table-wrap reveal">
-      <table class="evidence-table">
-        <thead><tr><th>Company</th><th>Date</th><th>What Changed</th><th>Why Strategically Important</th></tr></thead>
-        <tbody>
-          <tr><td class="ev-company">Reliance Jio</td><td>July 2024</td><td>Across-the-board tariff increases on prepaid and postpaid plans.</td><td>Signalled a shift from pure subscriber-growth pricing toward monetisation and ARPU improvement.</td></tr>
-          <tr><td class="ev-company">Bharti Airtel</td><td>July 2024</td><td>Matching tariff increases shortly after Jio's revision.</td><td>Demonstrates strategic interdependence — a rival must respond quickly to a leader's pricing move or risk relative value loss.</td></tr>
-        </tbody>
-      </table>
+    <div class="source-badges reveal reveal-stagger">
+      <details class="source-badge" style="--i:0"><summary>[TRAI]</summary><div class="sb-body">Telecom Regulatory Authority of India — subscriber, market-share and Mobile Number Portability reports, including the March 2026 subscriber base and the February and July 2026 MNP statistics.</div></details>
+      <details class="source-badge" style="--i:1"><summary>[RELIANCE]</summary><div class="sb-body">Reliance Industries / Jio Platforms Limited — FY26 financial results (operating revenue, EBITDA, PAT).</div></details>
+      <details class="source-badge" style="--i:2"><summary>[JIO]</summary><div class="sb-body">Reliance Jio operator disclosures — 5G user base, data traffic, patent filings, AirFiber and fixed broadband figures.</div></details>
+      <details class="source-badge" style="--i:3"><summary>[REUTERS]</summary><div class="sb-body">Public reporting on Jio's 2016 commercial launch and the July 2024 tariff increases by Jio and Bharti Airtel.</div></details>
     </div>
+    <details class="read-more reveal"><summary>Full reference list</summary>
+      <div class="rm-body">
+        <ul class="ref-list" style="margin-top:0;">
+          <li><b>TRAI</b> — telecom subscription and market-share data, March 2026 and July 2026.</li>
+          <li><b>TRAI</b> — Mobile Number Portability statistics: 14.47M requests, February 2026; 15.98M requests, July 2026.</li>
+          <li><b>Reliance Jio Platforms</b> — FY26 financial results (operating revenue ₹146,885 Cr, EBITDA ₹76,255 Cr, PAT ₹30,049 Cr).</li>
+          <li><b>Jio</b> — 5G user base (268M+), FY26 data traffic (241 EB), ARPU (₹214/month), cumulative patent filings by Jio Platforms and subsidiaries (6,817).</li>
+          <li><b>Jio / TRAI</b> — fixed broadband connections (27M+, ~43% share) and AirFiber connections (~13M).</li>
+          <li>Public reporting on <b>Reliance Jio's</b> commercial launch, September 2016.</li>
+          <li>Public reporting on <b>Reliance Jio's</b> and <b>Bharti Airtel's</b> tariff revisions, July 2024.</li>
+          <li>Operator announcements on <b>5G network rollout</b> (Reliance Jio, Bharti Airtel).</li>
+        </ul>
+        <div class="evidence-table-wrap" style="margin-top:1.2rem;">
+          <table class="evidence-table">
+            <thead><tr><th>Company</th><th>Date</th><th>What Changed</th><th>Why Strategically Important</th></tr></thead>
+            <tbody>
+              <tr><td class="ev-company">Reliance Jio</td><td>July 2024</td><td>Across-the-board tariff increases on prepaid and postpaid plans.</td><td>Signalled a shift from pure subscriber-growth pricing toward monetisation and ARPU improvement.</td></tr>
+              <tr><td class="ev-company">Bharti Airtel</td><td>July 2024</td><td>Matching tariff increases shortly after Jio's revision.</td><td>Demonstrates strategic interdependence — a rival must respond quickly to a leader's pricing move or risk relative value loss.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -1369,17 +1840,17 @@
   <div class="container col-narrow">
     <div class="final-card reveal">
       <span class="eyebrow">End of Report</span>
-      <p class="fc-title">"Porter's Five Forces — Indian Mobile Telecommunications Industry"</p>
+      <p class="fc-title">"Reliance Jio: From Industry Disruption to Defensible Advantage" — Porter · SWOT · VRIO Analysis</p>
       <div class="fc-line"></div>
       <span class="fc-name">Naveen Kumar</span>
       <span class="fc-meta">EN&nbsp;2401020041&nbsp;&nbsp;·&nbsp;&nbsp;Section&nbsp;A</span>
-      <span class="fc-date">Prepared August 2026</span>
+      <span class="fc-date">Business Strategy — Assignment 3 · Prepared September 2026</span>
     </div>
   </div>
 </section>
 
 <footer class="site-footer">
-  <p>PORTER'S FIVE FORCES ANALYSIS · INDIAN MOBILE TELECOMMUNICATIONS INDUSTRY</p>
+  <p>RELIANCE JIO — PORTER · SWOT · VRIO STRATEGIC ANALYSIS</p>
 </footer>
 
 </main>
@@ -1389,7 +1860,7 @@
 <!-- ============ PRESENTATION OVERLAY ============ -->
 <div class="present-overlay" id="presentOverlay" role="dialog" aria-modal="true" aria-label="Presentation mode">
   <div class="present-top">
-    <span class="nav-mark">FIVE&nbsp;FORCES <b>·</b> PRESENTATION MODE</span>
+    <span class="nav-mark">JIO&nbsp;STRATEGY <b>·</b> PRESENTATION MODE</span>
     <div style="display:flex;align-items:center;gap:1rem;">
       <span class="present-count" id="presentCount">1 / 5</span>
       <button class="present-exit" id="presentExit">Esc · Exit</button>
@@ -1503,32 +1974,73 @@
     spectrum:{ needs:"Spectrum is the regulated, finite input that determines how much network capacity an operator can offer.", power:"The government, as sole allocator, sets auction terms and pricing, giving it significant control over cost and availability.", pushback:"Only operators with sufficient balance-sheet strength can bid competitively, which itself reinforces the scale advantage of incumbents." }
   };
 
-  var RATING_LEVELS = {
-    low:{
-      label:"Low", cause:"Barriers such as spectrum licensing, capital requirements and existing scale keep new competitors out.",
-      meaning:"Reduces the risk of new capacity flooding the market and eroding prices.",
-      action:"Monitor niche or specialized entrants rather than nationwide challengers, who are unlikely to appear.",
-      appliesForceIds:[2]
-    },
-    moderate:{
-      label:"Moderate", cause:"Dependence exists on specific vendors, technologies or adjacent digital substitutes, but no single one dominates the picture.",
-      meaning:"Pressure exists but does not, by itself, decide profitability.",
-      action:"Diversify suppliers and continually reinforce the value of the core connectivity layer against alternative services.",
-      appliesForceIds:[4,5]
-    },
-    high:{
-      label:"High", cause:"Customers can compare and switch easily between largely similar offerings.",
-      meaning:"Pricing power is constrained and margins face constant pressure.",
-      action:"Invest in retention — network quality, service experience and differentiated bundles — rather than competing on price alone.",
-      appliesForceIds:[3]
-    },
-    veryhigh:{
-      label:"Very High", cause:"A small number of well-capitalized rivals compete intensely for the same largely undifferentiated customer base, and high sunk costs discourage retreat.",
-      meaning:"Heavy pressure on tariffs and margins even when demand is healthy.",
-      action:"Build sustainable advantage through scale, network superiority and ecosystem bundling rather than short-term price cuts.",
-      appliesForceIds:[1]
-    }
+  var VRIO_ITEMS = [
+    { id:"scale", name:"Subscriber &amp; Network Scale", v:"yes", r:"rel", i:"rel", o:"yes", result:"strong",
+      valueText:"A base of 506.03M subscribers generates massive operating leverage and negotiating power with suppliers.",
+      rarityText:"Only Airtel operates at a broadly comparable scale in India; Vi and BSNL trail well behind.",
+      imitText:"Matching this scale would require years of investment and customer acquisition — not something a rival can do quickly.",
+      orgText:"Jio's network operations and distribution are built to serve and monetise a base this large.",
+      resultText:"Strong advantage — meaningful, but Airtel's comparable scale means it stops short of being fully sustained.",
+      source:"TRAI, July 2026" },
+    { id:"spectrum", name:"Spectrum Portfolio", v:"yes", r:"yes", i:"rel", o:"yes", result:"strong",
+      valueText:"Spectrum determines how much network capacity Jio can offer nationally.",
+      rarityText:"Spectrum is finite and regulator-allocated, making large holdings genuinely scarce.",
+      imitText:"Rivals can acquire more spectrum, but only through costly auctions requiring comparable balance-sheet strength.",
+      orgText:"Jio has consistently converted spectrum holdings into deployed, monetised network capacity.",
+      resultText:"Strong advantage — real scarcity, but not fully unique since competitors can still bid for spectrum.",
+      source:"TRAI / DoT spectrum auction records" },
+    { id:"iptech", name:"Proprietary Technology / IP", v:"yes", r:"yes", i:"yes", o:"yes", result:"sustained",
+      valueText:"Can support network efficiency, innovation and differentiated capability.",
+      rarityText:"Accumulated internal technology and IP are not common at this scale.",
+      imitText:"Patents and engineering know-how accumulate over time.",
+      orgText:"Jio has an operating structure capable of deploying these capabilities.",
+      resultText:"Sustained competitive advantage candidate.",
+      source:"Jio Platforms patent filing disclosures" },
+    { id:"5gbase", name:"5G Installed Base", v:"yes", r:"rel", i:"rel", o:"yes", result:"temporary",
+      valueText:"268M+ 5G users give Jio the largest live 5G base to monetise.",
+      rarityText:"Airtel has also deployed 5G aggressively, so Jio's lead is real but not exclusive.",
+      imitText:"Competitors are actively closing the coverage gap, so the lead is likely to narrow over time.",
+      orgText:"Jio has the commercial structure to upsell 5G plans and devices.",
+      resultText:"Temporary advantage — a genuine lead today, unlikely to hold as rivals close the gap.",
+      source:"Jio / operator 5G disclosures, March 2026" },
+    { id:"capital", name:"Financial Capacity", v:"yes", r:"rel", i:"rel", o:"yes", result:"strong",
+      valueText:"₹76,255 Cr EBITDA funds continuous network investment without external strain.",
+      rarityText:"Backing from the wider Reliance group gives Jio access to capital few rivals can match.",
+      imitText:"Building comparable financial capacity would require a parent group of similar scale.",
+      orgText:"Capital is systematically deployed into network and ecosystem expansion.",
+      resultText:"Strong advantage — a real edge, though not unique in principle if a rival secured comparable backing.",
+      source:"Reliance / Jio Platforms FY26 results" },
+    { id:"ecosystem", name:"Digital Ecosystem", v:"yes", r:"rel", i:"rel", o:"yes", result:"sustained",
+      valueText:"Bundled apps and services (JioHotstar, JioMart, JioFinance) increase stickiness beyond connectivity.",
+      rarityText:"Few competitors have built a comparably wide, integrated consumer ecosystem.",
+      imitText:"Replicating an integrated ecosystem takes years of coordinated product and content investment, not a single launch.",
+      orgText:"Jio actively cross-promotes and bundles ecosystem products with core mobile plans.",
+      resultText:"Potential sustained advantage — valuable specifically because it is hard to copy as a whole, not app by app.",
+      source:"Jio product disclosures" },
+    { id:"broadband", name:"Fixed Broadband / AirFiber", v:"yes", r:"yes", i:"rel", o:"yes", result:"temporary",
+      valueText:"27M+ connections and ~43% share give Jio an early lead in a still-forming category.",
+      rarityText:"Few rivals have matched Jio's AirFiber rollout pace so far.",
+      imitText:"Airtel and others are expanding fixed broadband too, so the lead is exposed to being narrowed.",
+      orgText:"Jio is actively bundling broadband with mobile and entertainment.",
+      resultText:"Temporary advantage — an early lead in a category competitors are still entering.",
+      source:"Jio / TRAI broadband data" },
+    { id:"brand", name:"Brand", v:"yes", r:"no", i:"no", o:"yes", result:"parity",
+      valueText:"Brand recognition supports customer acquisition and trust.",
+      rarityText:"Airtel and BSNL are also well-established, trusted telecom brands in India.",
+      imitText:"Brand perception can shift relatively quickly with service issues or a rival's marketing push.",
+      orgText:"Jio invests in brand and marketing at national scale.",
+      resultText:"Competitive parity — valuable, but not a source of advantage on its own.",
+      source:"Public brand-perception reporting" }
+  ];
+  var VRIO_CELL = { yes:{txt:"Yes",cls:"yes"}, rel:{txt:"Rel.",cls:"rel"}, no:{txt:"No",cls:"no"} };
+  var VRIO_RESULT = {
+    parity:{cls:"parity",label:"Competitive Parity"},
+    temporary:{cls:"temporary",label:"Temporary Advantage"},
+    strong:{cls:"strong",label:"Strong Advantage"},
+    sustained:{cls:"sustained",label:"Potential Sustained Advantage"}
   };
+  function vrioCell(key){ var c = VRIO_CELL[key]; return '<td class="vc '+c.cls+'">'+c.txt+'</td>'; }
+  function vrioById(id){ for(var i=0;i<VRIO_ITEMS.length;i++){ if(VRIO_ITEMS[i].id===id) return VRIO_ITEMS[i]; } return null; }
 
   function starString(count){
     var s = "";
@@ -1608,27 +2120,6 @@
 
   setActiveForce(1, false);
 
-  /* ---------- Ratings scale ---------- */
-  var scaleDetail = document.getElementById("scaleDetail");
-  function renderScale(levelKey){
-    var l = RATING_LEVELS[levelKey];
-    var names = l.appliesForceIds.map(function(id){ return forceById(id).title; }).join(" &amp; ");
-    scaleDetail.innerHTML =
-      '<div class="sd-col"><h4>What causes the pressure?</h4><p>'+l.cause+'</p></div>' +
-      '<div class="sd-col"><h4>What it means for profitability</h4><p>'+l.meaning+'</p></div>' +
-      '<div class="sd-col"><h4>What companies should do</h4><p>'+l.action+'</p></div>' +
-      '<div class="scale-applies">Applies to in this analysis: <b>'+names+'</b></div>';
-  }
-  document.querySelectorAll(".scale-seg").forEach(function(seg){
-    seg.addEventListener("click", function(){
-      document.querySelectorAll(".scale-seg").forEach(function(s){ s.classList.remove("is-active"); });
-      seg.classList.add("is-active");
-      renderScale(seg.getAttribute("data-level"));
-    });
-  });
-  document.querySelector('.scale-seg[data-level="veryhigh"]').classList.add("is-active");
-  renderScale("veryhigh");
-
   /* ---------- Heatmap ---------- */
   var heatmapBody = document.getElementById("heatmapBody");
   FORCES.forEach(function(f){
@@ -1702,6 +2193,83 @@
     });
   });
   renderSupcat("equipment");
+
+  /* ---------- VRIO table ---------- */
+  var vrioBodyEl = document.getElementById("vrioBody");
+  var vrioDrawerEl = document.getElementById("vrioDrawer");
+  var activeVrioId = "iptech";
+
+  VRIO_ITEMS.forEach(function(item){
+    var tr = document.createElement("tr");
+    tr.setAttribute("data-vrio", item.id);
+    tr.setAttribute("tabindex","0");
+    tr.setAttribute("role","button");
+    tr.setAttribute("aria-label","View VRIO reasoning for "+item.name);
+    var res = VRIO_RESULT[item.result];
+    tr.innerHTML =
+      '<td class="vrio-name">'+item.name+'</td>' +
+      vrioCell(item.v) + vrioCell(item.r) + vrioCell(item.i) + vrioCell(item.o) +
+      '<td><span class="vrio-result-tag '+res.cls+'">'+res.label+'</span></td>';
+    function activate(){ setActiveVrio(item.id); }
+    tr.addEventListener("click", activate);
+    tr.addEventListener("keydown", function(e){ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); activate(); } });
+    vrioBodyEl.appendChild(tr);
+  });
+
+  function renderVrioDrawer(item){
+    var res = VRIO_RESULT[item.result];
+    vrioDrawerEl.innerHTML =
+      '<span class="eyebrow" style="color:#E8B7C0;">'+item.name+'</span>' +
+      '<div class="vd-result"><span class="vrio-result-tag '+res.cls+'">'+res.label+'</span></div>' +
+      '<div class="vd-row"><div class="vd-q"><span>Value</span><span class="vd-a">'+VRIO_CELL[item.v].txt.toUpperCase()+'</span></div><p>'+item.valueText+'</p></div>' +
+      '<div class="vd-row"><div class="vd-q"><span>Rarity</span><span class="vd-a">'+VRIO_CELL[item.r].txt.toUpperCase()+'</span></div><p>'+item.rarityText+'</p></div>' +
+      '<div class="vd-row"><div class="vd-q"><span>Imitability</span><span class="vd-a">'+VRIO_CELL[item.i].txt.toUpperCase()+'</span></div><p>'+item.imitText+'</p></div>' +
+      '<div class="vd-row"><div class="vd-q"><span>Organisation</span><span class="vd-a">'+VRIO_CELL[item.o].txt.toUpperCase()+'</span></div><p>'+item.orgText+'</p></div>' +
+      '<div class="vd-row"><div class="vd-q"><span>Result</span></div><p>'+item.resultText+'</p></div>' +
+      '<div class="vd-source">Source: '+item.source+'</div>';
+  }
+  function setActiveVrio(id){
+    activeVrioId = id;
+    renderVrioDrawer(vrioById(id));
+    document.querySelectorAll('#vrioBody tr').forEach(function(row){
+      row.classList.toggle("is-active", row.getAttribute("data-vrio") === id);
+    });
+  }
+  setActiveVrio(activeVrioId);
+
+  /* ---------- Hero stat counters ---------- */
+  var heroStatsEl = document.getElementById("heroStats");
+  function formatCount(num, decimals){
+    return decimals > 0 ? num.toFixed(decimals) : Math.round(num).toLocaleString("en-IN");
+  }
+  function runCounters(){
+    document.querySelectorAll(".stat-num").forEach(function(el){
+      var target = parseFloat(el.getAttribute("data-count"));
+      var prefix = el.getAttribute("data-prefix") || "";
+      var suffix = el.getAttribute("data-suffix") || "";
+      var decimals = el.getAttribute("data-count").indexOf(".") > -1 ? 2 : 0;
+      if(reducedMotion){ el.textContent = prefix + formatCount(target, decimals) + suffix; return; }
+      var start = null, duration = 1400;
+      function step(ts){
+        if(!start) start = ts;
+        var progress = Math.min((ts - start) / duration, 1);
+        var eased = 1 - Math.pow(1 - progress, 3);
+        el.textContent = prefix + formatCount(target * eased, decimals) + suffix;
+        if(progress < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    });
+  }
+  if(heroStatsEl && "IntersectionObserver" in window){
+    var statsIo = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){ runCounters(); statsIo.disconnect(); }
+      });
+    }, {threshold:0.4});
+    statsIo.observe(heroStatsEl);
+  } else if(heroStatsEl){
+    runCounters();
+  }
 
   /* ---------- Customer choice flow ---------- */
   var flowSteps = Array.prototype.slice.call(document.querySelectorAll(".flow-step"));
@@ -1781,17 +2349,44 @@
   var slideIndex = 0;
   var lastFocused = null;
 
-  FORCES.forEach(function(f){
+  function addSlide(numLabel, pillHtml, title, desc, impl){
     var slide = document.createElement("div");
     slide.className = "present-slide";
     slide.innerHTML =
-      '<span class="ps-num">0'+f.id+'</span>' +
-      '<div><span class="'+pillClass(f.level)+'">'+f.rating+'</span></div>' +
-      '<h2>'+f.title+'</h2>' +
-      '<p class="ps-desc">'+f.desc+'</p>' +
-      '<p class="ps-impl"><b>Strategic implication —</b> '+f.implication+'</p>';
+      '<span class="ps-num">'+numLabel+'</span>' +
+      (pillHtml ? '<div>'+pillHtml+'</div>' : '') +
+      '<h2>'+title+'</h2>' +
+      '<p class="ps-desc">'+desc+'</p>' +
+      (impl ? '<p class="ps-impl"><b>Strategic implication —</b> '+impl+'</p>' : '');
     presentBody.appendChild(slide);
+  }
+
+  addSlide("—", "", "Reliance Jio: From Industry Disruption to Defensible Advantage",
+    "Porter → SWOT → VRIO analysis of India's mobile telecommunications industry and Jio's competitive position. Naveen Kumar · EN 2401020041 · Section A.",
+    "Jio has already built scale. The next battle is defensibility.");
+  addSlide("?", "", "Does Jio's scale actually create a lasting competitive advantage?",
+    "Porter (industry pressure) → SWOT (Jio's position) → VRIO (defensible resources) → Strategy (what Jio should do next).", "");
+  FORCES.forEach(function(f){
+    addSlide("0"+f.id, '<span class="'+pillClass(f.level)+'">'+f.rating+'</span>', f.title, f.desc, f.implication);
   });
+  addSlide("P", "", "Porter Verdict: Moderately Unattractive / Difficult",
+    "High entry barriers protect incumbents. But very high rivalry and high buyer power pressure pricing and margins.",
+    "The winner is not simply the cheapest operator. The winner needs scale, network quality, customer retention, capital discipline and a digital ecosystem.");
+  addSlide("S", "", "SWOT: Where Jio Stands",
+    "Strength — 506.03M subscribers, 39.29% share. Weakness — ₹214/month ARPU despite scale. Opportunity — 5G and home broadband monetisation. Threat — Airtel at 38.01% and rising MNP switching.",
+    "Scale is real. So is the competition right behind it.");
+  addSlide("V", "", "VRIO: Not Every Strength Is a Moat",
+    "Proprietary technology and IP score highest — valuable, rare, hard to imitate and organisationally exploited. Brand is closer to competitive parity.",
+    "VRIO results are relative to competitors — Jio's scale alone is not automatically a sustained moat.");
+  addSlide("M", "", "The Moat Is the Combination",
+    "Spectrum, network scale, 500M+ users, proprietary technology, 5G, fixed broadband and digital ecosystem all reinforce one another.",
+    "Jio's strongest advantage comes from resources reinforcing each other, not any single one.");
+  addSlide("R", "", "So What Should Jio Do Next?",
+    "Monetise 5G. Increase value per customer. Make AirFiber a household platform. Turn technology into economic advantage. Defend against Airtel without a price war.", "");
+  addSlide("F", "", "Jio Has Built Scale. The Next Battle Is Defensibility.",
+    "Porter's high rivalry and buyer power, SWOT's scale-vs-Airtel tension, and VRIO's selective moats all point the same direction.",
+    "Jio's advantage is strongest when scale, spectrum, proprietary technology and ecosystem integration reinforce one another.");
+
   var slides = Array.prototype.slice.call(document.querySelectorAll(".present-slide"));
 
   function renderSlide(){
@@ -1803,7 +2398,7 @@
 
   function openPresent(){
     lastFocused = document.activeElement;
-    slideIndex = Math.max(0, activeForceId - 1);
+    slideIndex = 0;
     renderSlide();
     presentOverlay.classList.add("is-open");
     document.body.style.overflow = "hidden";
@@ -1819,7 +2414,10 @@
   presentPrev.addEventListener("click", function(){ if(slideIndex>0){ slideIndex--; renderSlide(); } });
   presentNext.addEventListener("click", function(){ if(slideIndex<slides.length-1){ slideIndex++; renderSlide(); } });
   document.addEventListener("keydown", function(e){
-    if(!presentOverlay.classList.contains("is-open")) return;
+    if(!presentOverlay.classList.contains("is-open")){
+      if((e.key === "p" || e.key === "P") && !e.metaKey && !e.ctrlKey && !e.altKey){ openPresent(); }
+      return;
+    }
     if(e.key === "Escape"){ closePresent(); }
     else if(e.key === "ArrowRight"){ if(slideIndex<slides.length-1){ slideIndex++; renderSlide(); } }
     else if(e.key === "ArrowLeft"){ if(slideIndex>0){ slideIndex--; renderSlide(); } }
